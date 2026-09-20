@@ -1,0 +1,28 @@
+# Secrets — never commit (AGENT.md §13.7)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / JS
+node_modules/
+dist/
+build/
+.next/
+coverage/
+pnpm-debug.log*
+npm-debug.log*
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
