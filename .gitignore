@@ -1,4 +1,4 @@
-# Secrets — never commit (AGENT.md §13.7)
+# Secrets — never commit (AGENT.md §12.7)
 .env
 .env.*
 !.env.example
@@ -20,6 +20,15 @@ build/
 coverage/
 pnpm-debug.log*
 npm-debug.log*
+
+# Local runtime data — server-side learner data (AGENT.md §5/§6.7)
+var/
+*.db
+*.db-journal
+*.db-wal
+
+# Scratch space used by tooling in restricted environments
+.tmp/
 
 # Editors / OS
 .DS_Store

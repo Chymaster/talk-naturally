@@ -1,0 +1,7 @@
+# pnpm configuration (pnpm 12 reads build-script approval here).
+#
+# esbuild is vitest's bundler. Its install script only links the platform
+# binary; allowing it explicitly keeps installs reproducible and quiet instead
+# of depending on an interactive `pnpm approve-builds`.
+allowBuilds:
+  esbuild: true

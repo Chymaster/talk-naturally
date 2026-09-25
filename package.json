@@ -1,0 +1,31 @@
+{
+  "name": "talk-naturally",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Language-learning conversation engine — proof of concept (see MVP.md)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "boundary": "tsx tools/boundary-check.ts",
+    "demo:cli": "tsx hosts/cli/main.ts",
+    "stub:model": "tsx tools/stub-provider.ts",
+    "start": "tsx hosts/server/main.ts",
+    "verify": "pnpm typecheck && pnpm boundary && pnpm test"
+  },
+  "dependencies": {
+    "@langchain/langgraph": "^1.4.17",
+    "discord.js": "^14.27.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.1"
+  }
+}
