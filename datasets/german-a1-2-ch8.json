@@ -1,0 +1,140 @@
+{
+  "title": "German A1.2 — chapter 8: talking about how to get to places",
+  "source_language": "English",
+  "target_language": "German",
+  "origin": "imported",
+  "points": [
+    {
+      "kind": "grammar",
+      "title": "Dativ: mit + dem/der",
+      "detail": "„mit“ always takes the dative. Masculine and neuter become „dem“, feminine becomes „der“: mit dem Bus, mit dem Fahrrad, mit der Bahn. Plural: mit den Eltern.",
+      "raw_source": "chapter 8, grammar box 1"
+    },
+    {
+      "kind": "grammar",
+      "title": "Dativ: zu + dem/der (zum/zur)",
+      "detail": "„zu“ also takes the dative and usually contracts: zu dem → zum, zu der → zur. Ich gehe zum Bahnhof. Ich gehe zur Haltestelle.",
+      "raw_source": "chapter 8, grammar box 1"
+    },
+    {
+      "kind": "grammar",
+      "title": "Womit …? / Mit wem …?",
+      "detail": "„Womit fährst du?“ asks about the means of transport. „Mit wem fährst du?“ asks about the person. Both keep „mit“ + dative in the answer.",
+      "raw_source": "chapter 8, grammar box 2"
+    },
+    {
+      "kind": "grammar",
+      "title": "zu Fuß — no article",
+      "detail": "„zu Fuß“ and „nach Hause“ take no article. Ich gehe zu Fuß. Ich gehe nach Hause.",
+      "raw_source": "chapter 8, grammar box 2"
+    },
+    {
+      "kind": "grammar",
+      "title": "Trennbare Verben im Satz: umsteigen, abfahren, ankommen",
+      "detail": "Separable verbs split: the prefix goes to the end. Ich steige am Hauptbahnhof um. Der Zug fährt um acht ab. Ich komme um neun an.",
+      "raw_source": "chapter 8, grammar box 3"
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Womit fährst du? — Ich fahre mit dem Bus.",
+      "detail": "Question word first, then the verb, then the subject. The answer repeats the prepositional phrase in the dative.",
+      "raw_source": "chapter 8, dialogue 1"
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Wie komme ich zum Bahnhof?",
+      "detail": "Polite way to ask for directions. „zum“ because Bahnhof is masculine and „zu“ takes the dative.",
+      "raw_source": "chapter 8, dialogue 1"
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Ich gehe zu Fuß, das dauert zehn Minuten.",
+      "detail": "Two main clauses joined with a comma and „das“. Useful for explaining how long something takes.",
+      "raw_source": "chapter 8, dialogue 2"
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Welche Linie fährt zum Marktplatz?",
+      "detail": "„Welche Linie …?“ for bus or tram lines. Answer: Die Linie 4 fährt zum Marktplatz.",
+      "raw_source": "chapter 8, exercise 3"
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Ich steige am Hauptbahnhof in die Linie 4 um.",
+      "detail": "Word order with a separable verb and a dative place phrase: am Hauptbahnhof, then the accusative direction in die Linie 4, then the prefix um at the end.",
+      "raw_source": "chapter 8, exercise 3"
+    },
+    {
+      "kind": "vocab",
+      "title": "der Bus",
+      "detail": "bus — Ich fahre mit dem Bus.",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "die Bahn",
+      "detail": "train / railway — Ich fahre mit der Bahn.",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "das Fahrrad",
+      "detail": "bicycle — Mit dem Fahrrad dauert es zwanzig Minuten.",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "zu Fuß gehen",
+      "detail": "to walk, to go on foot — Ich gehe zu Fuß.",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "umsteigen",
+      "detail": "to change (trains, buses) — Ich steige am Hauptbahnhof um.",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "der Bahnhof",
+      "detail": "train station — Wie komme ich zum Bahnhof?",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "die Haltestelle",
+      "detail": "stop (bus, tram) — Die Haltestelle ist vorne links.",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "abfahren",
+      "detail": "to depart — Der Zug fährt um acht ab.",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "ankommen",
+      "detail": "to arrive — Ich komme um neun Uhr an.",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "die Richtung",
+      "detail": "direction — In welche Richtung fährt der Bus?",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "die Linie",
+      "detail": "line (bus, tram, underground) — Die Linie 4 fährt zum Marktplatz.",
+      "raw_source": "chapter 8, vocabulary list"
+    },
+    {
+      "kind": "vocab",
+      "title": "dauern",
+      "detail": "to take (time) — Wie lange dauert das?",
+      "raw_source": "chapter 8, vocabulary list"
+    }
+  ]
+}
