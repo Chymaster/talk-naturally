@@ -1,28 +1,28 @@
 /**
  * Real clock. Injected by the host; the core never reads the time itself
- * (AGENT.md §3).
+ * (design/20-architecture.md §2).
  */
 import type { ClockPort } from "../core/ports/config.js";
 
 export class SystemClock implements ClockPort {
-  now(): Date {
-    return new Date();
-  }
+ now(): Date {
+ return new Date();
+ }
 }
 
 /** Fixed clock for tests and reproducible demo transcripts. */
 export class FixedClock implements ClockPort {
-  #current: Date;
+ #current: Date;
 
-  constructor(startIso: string) {
-    this.#current = new Date(startIso);
-  }
+ constructor(startIso: string) {
+ this.#current = new Date(startIso);
+ }
 
-  now(): Date {
-    return new Date(this.#current);
-  }
+ now(): Date {
+ return new Date(this.#current);
+ }
 
-  advanceMs(milliseconds: number): void {
-    this.#current = new Date(this.#current.getTime() + milliseconds);
-  }
+ advanceMs(milliseconds: number): void {
+ this.#current = new Date(this.#current.getTime() + milliseconds);
+ }
 }
