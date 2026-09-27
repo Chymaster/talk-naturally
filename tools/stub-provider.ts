@@ -34,7 +34,7 @@ function detectSchemaName(body: ChatBody): string {
   // The fallback path has no response_format; the adapter puts the name in the
   // system prompt instead.
   const system = body.messages?.[0]?.content ?? "";
-  return /name:\s*([A-Za-z]+)/u.exec(system)?.[1] ?? "TurnResult";
+  return /name:\s*([A-Za-z]+)/u.exec(system)?.[1] ?? "TurnDecision";
 }
 
 function firstTargetId(body: ChatBody): string | null {
@@ -46,14 +46,22 @@ function completionFor(schemaName: string, targetId: string | null): string {
   if (schemaName === "OpeningMessage") {
     return JSON.stringify({ reply: "Hallo! Womit fährst du heute zur Arbeit?" });
   }
+  if (schemaName === "AnswerQuestion") {
+    return JSON.stringify({ reply: "In English you would say: by bus." });
+  }
+  if (schemaName === "ContinueConversation") {
+    return JSON.stringify({ feedback: "Sehr gut!", question: "Und wie ist es am Wochenende?" });
+  }
+  // TurnDecision (and any unknown schema): classify as an attempt and attribute
+  // `used` to the first target, so progress actually moves.
   return JSON.stringify({
     branch: "attempt_judged",
-    reply: "Sehr gut! Und wie ist es am Wochenende?",
     corrections: [],
     signals:
       targetId === null
         ? []
         : [{ knowledge_point_id: targetId, outcome: "used", evidence: "(stub provider)" }],
+    answered_previous_question: true,
   });
 }
 

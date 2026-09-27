@@ -1,10 +1,11 @@
 # MVP.md — proof-of-concept scope and decision record
 
-> **Status: proposal, non-normative.** `AGENT.md` remains the single source of
-> truth for how agents work here (§17 of that file). This document scopes the
-> **proof of concept** and records the decisions the maintainer made to unblock
-> it. It becomes a rule only when folded into `AGENT.md`. Where this file and
-> `AGENT.md` disagree, `AGENT.md` wins and the disagreement is listed in §8.
+> **Status: status record, non-normative.** The specification now lives in
+> [`design/`](design/00-index.md); `AGENT.md` holds the process rules, including
+> the design-docs-first rule. This document reports what the proof of concept
+> built and the decisions the maintainer made to unblock it. **It is not a
+> specification and must not be treated as one** — where this file and a design
+> doc disagree, the design doc wins and the disagreement is listed in §8.
 >
 > **Decision date:** 2026-09-25 · **Item states:** `DECIDED` (maintainer),
 > `PROPOSED` (agent default, needs a yes/no), `OPEN` (must be answered before
@@ -16,12 +17,12 @@ The PoC described here is **implemented** in this repository: the core domain,
 ports, and steering loop; the LangGraph turn workflow with all four authored
 branches; SQLite storage with idempotent progress writes; the OpenAI-compatible
 and fake model adapters; the Discord channel and the CLI host; the scheduler;
-81 offline tests; and a core-boundary check that fails the build.
+87 offline tests; and a core-boundary check that fails the build.
 
 Verified mechanically, not by assertion:
 
 - `pnpm verify` → type-check clean, `✔ core boundary intact (16 files scanned)`,
-  81 tests passing with no network and no live model.
+  87 tests passing with no network and no live model.
 - `pnpm demo:cli` → import → scheduled session → a conversation that routes
   through `attempt_judged`/`corrected`, `kp_question`, `drift`, and
   `attempt_judged`/`accepted` → progress rows → idempotent re-import (`added=0`,
@@ -63,7 +64,7 @@ from dependency-cruiser to a purpose-built scanner.
 
 One learner can import a class, converse with the agent on Discord, and be
 steered by **persisted per-knowledge-point progress** — with the `core/`
-boundary of `AGENT.md` §3 intact.
+boundary of `design/20-architecture.md` §2 intact.
 
 The PoC is a **demonstration of the architecture and the steering loop**, not a
 v1 product. It proves three claims:
@@ -75,16 +76,18 @@ v1 product. It proves three claims:
 3. **Steering is a deterministic function of progress** (§6.3): the agent picks
    the next target from persisted counters and logs why.
 
-Non-goals (explicitly out of PoC scope): Telegram, website, phone clients; the
+Non-goals at the time (2026-09-25): Telegram, website, phone clients; the
 built-in German A1–C2 library (§19.2, licence-blocked); model-fitting of
-learner uploads (§19.1); Postgres; multi-learner scale; billing.
+learner uploads (§19.1); Postgres; multi-learner scale; billing. **Update
+2026-09-27: Telegram shipped as the second channel** (`design/72-channels.md`,
+D-034); the website and phone clients remain non-goals.
 
 ## 2. Stack decisions
 
 | Item | State | Decision |
 |---|---|---|
 | Language / runtime | **DECIDED** | TypeScript on Node ≥22, ESM (`"type": "module"`). Environment has Node v22.23.2. |
-| Orchestration engine | DECIDED (AGENT.md §2.1) | LangGraph.js (`@langchain/langgraph`). |
+| Orchestration engine | DECIDED (design/10-overview.md §3.1) | LangGraph.js (`@langchain/langgraph`). |
 | Package manager | **DECIDED** | `pnpm`; `tsx` runs the hosts; `tsc --noEmit` type-checks. |
 | Test framework | **DECIDED** | `vitest` (native ESM/TS, no build step). |
 | Discord integration | **DECIDED** | `discord.js` ^14.27 (current stable). |
@@ -104,7 +107,7 @@ slash command for on-demand session start regardless.
 
 The model is a remote dependency behind the port (§8). Configuration is resolved
 **only in the host composition root**; `core/` receives a plain config object and
-never sees a URL, a token, or the word "openrouter" (§3).
+never sees a URL, a token, or the word "deepseek" (§3).
 
 ### 3.1 Resolution order
 
@@ -116,17 +119,20 @@ Highest precedence wins:
 | 2 | Deployer configuration | the operator running the server | self-host default for everyone |
 | 3 | Built-in default | the code | zero-config first run |
 
-The built-in default is **DECIDED**: base URL `https://openrouter.ai/api/v1`,
-model `google/gemma-4-26b-a4b-it`
-(verified real: 25.2B total / 3.8B active MoE, 256K context, Apache 2.0,
-supports structured outputs and native function calling).
+The built-in default is **DECIDED**: base URL `https://api.deepseek.com/v1`,
+model `deepseek-flash`
+(verified real: DeepSeek-V4.1-Flash, 1M-token context, 393K max output, native
+function calling, and strict `json_schema` structured output). Enforcement is
+requested through the **Responses API** (`POST {base}/responses`,
+`text.format: {type: "json_schema"}`); the chat-completions surface rejects
+`json_schema` outright, so the adapter speaks `/responses`.
 
 ### 3.2 The config object
 
 ```ts
 type ModelConfig = {
-  baseUrl: string;          // e.g. https://openrouter.ai/api/v1
-  model: string;            // e.g. google/gemma-4-26b-a4b-it
+  baseUrl: string;          // e.g. https://api.deepseek.com/v1
+  model: string;            // e.g. deepseek-flash
   apiKey: string | null;    // deployer key or learner token; null = local/fake
   source: "learner" | "deployer" | "default";
   capabilities: {           // declared, never probed by failing (§8)
@@ -154,7 +160,7 @@ Deployer variable **names** are documented in `README.md`, never values (§12.7)
   adapter prompts for JSON and parses defensively with bounded repair (§8). The
   turn-result schema in §5.1 is therefore kept small enough for that path.
 
-## 4. Repository layout (concrete `AGENT.md` §9)
+## 4. Repository layout (concrete `design/70-stack.md` §2)
 
 Single package for the PoC — the boundary is enforced by rules, not by workspace
 boundaries.
@@ -260,7 +266,7 @@ a licensing decision.
 
 ## 6. Definition of done for the PoC
 
-Mapped to `AGENT.md` §16. The demo script, in order:
+Mapped to `AGENT.md` §7. The demo script, in order:
 
 1. Fresh DB; invite the bot; `/start` opens a session with an opening message
    chosen by `select_targets`, and the log states the reason.
@@ -289,10 +295,10 @@ Mapped to `AGENT.md` §16. The demo script, in order:
 
 ### 8.1 Conflicts with `AGENT.md` (resolved or open)
 
-1. **SQLite vs `AGENT.md` §10/§11 — RESOLVED (maintainer, 2026-09-25).** SQLite
+1. **SQLite vs the earlier stack section — RESOLVED (maintainer, 2026-09-25).** SQLite
    is the **single engine for v1**; PostgreSQL is a future option and never a
    parallel dialect. That keeps §11's "no second dialect to support" rule intact
-   and makes the `PostgresSaver` default in §10 obsolete. `AGENT.md` §10 has been
+   and makes the `PostgresSaver` default obsolete. `design/70-stack.md` has been
    updated to record this.
 2. **Learner-supplied tokens vs §12.7 — RESOLVED FOR THE POC, OPEN FOR V1.** The
    PoC keeps a learner key in memory for the life of the process and never writes
@@ -316,6 +322,6 @@ Mapped to `AGENT.md` §16. The demo script, in order:
   resumable rather than reconstructed from the turn tables (§2).
 - **Discord Message Content Intent** is privileged: confirm the production guild
   setup, or make the channel slash-command-first (README documents the toggle).
-- **Git conventions** (§14 of `AGENT.md`) remain entirely `TODO`.
+- **Git conventions** (`AGENT.md` §6) remain entirely `TODO`.
 - Whether the CLI host stays a permanent second composition root or is only used
   by tests.

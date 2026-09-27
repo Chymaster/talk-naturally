@@ -1,28 +1,29 @@
 # idea.md — staging register for unreviewed ideas
 
-> **Non-normative.** `AGENT.md` is the single source of truth for how agents
-> work in **talk-naturally**. Nothing in this file is a rule, an instruction, or
-> a decision. An idea becomes real only when it is merged into `AGENT.md`.
+> **Non-normative.** The [`design/`](design/00-index.md) docs are the
+> specification for **talk-naturally**; [`AGENT.md`](AGENT.md) holds the process
+> rules for agents. Nothing in this file is a rule, an instruction, or
+> a decision. An idea becomes real only when it is merged into a design doc.
 
-Unreviewed ideas are written here first, so `AGENT.md` stays short and reviewed
+Unreviewed ideas are written here first, so `design/` stays reviewed
 while nothing is lost. Because ideas land here unreviewed, an idea may
-contradict another idea or a rule already in `AGENT.md`; finding and resolving
-that conflict is part of merging it into `AGENT.md`.
+contradict another idea or a rule already in `design/`; finding and resolving
+that conflict is part of merging it into `design/`.
 
 ## How this file is used
 
 1. **Capture.** Append the idea under *Ideas* as the next free `IDEA-nnnn`,
-   using the entry template. Do not edit `AGENT.md` in the same step.
+   using the entry template. Do not edit `design/` in the same step.
 2. **Review.** Check the idea against every other idea here and against the
-   `AGENT.md` sections it would touch. Record the result in *Conflicts* — an
+   `design/` sections it would touch. Record the result in *Conflicts* — an
    explicit "none found" is required, not silence.
 3. **Resolve.** Settle every conflict before merging: adopt one side, amend the
    idea, supersede the other idea, or reject. Two contradictory ideas must not
    both be merged.
-4. **Merge.** Fold the idea into `AGENT.md` as a rule (dropping the discussion),
+4. **Merge.** Fold the idea into `design/` as a rule (dropping the discussion),
    update the lines it changes rather than duplicating them, then mark the entry
    `Merged` and name the section it became.
-5. **Never** leave a merged idea only here. `AGENT.md` is the artifact agents
+5. **Never** leave a merged idea only here. `design/` is the artifact agents
    read; this file is the open queue plus the history of what was decided.
 
 ## Status values
@@ -38,54 +39,54 @@ that conflict is part of merging it into `AGENT.md`.
 - **Author:** <who raised it>
 - **Idea:** <what is proposed, in one or two sentences>
 - **Why:** <the problem it solves / rationale>
-- **Touches:** <AGENT.md sections it would change, or "new section">
-- **Conflicts:** <other IDEA ids and/or AGENT.md rules that disagree; or "none found">
+- **Touches:** <design/ sections it would change, or "new section">
+- **Conflicts:** <other IDEA ids and/or design/ rules that disagree; or "none found">
 - **Resolution:** <how each conflict was settled; required before Merged>
-- **Merged as:** <AGENT.md section(s); only when Status is Merged>
+- **Merged as:** <design/ section(s); only when Status is Merged>
 ```
 
 ## Conflict rules
 
 - Conflicts are **expected**, not a failure. Surfacing one is the point of this
   file.
-- A conflict is any pair of ideas, or an idea and an `AGENT.md` rule, that
+- A conflict is any pair of ideas, or an idea and an `design/` rule, that
   cannot both be true at once.
-- Cite conflicts by IDEA id and by `AGENT.md` section number so they can be
+- Cite conflicts by IDEA id and by `design/` section number so they can be
   found again.
 - A losing idea is not deleted: mark it `Superseded` and point at the winner.
-- **Tie-break while undecided:** an existing `AGENT.md` rule wins and the idea
-  stays `Open` or `Parked` until a maintainer decides. `AGENT.md` changes only
+- **Tie-break while undecided:** an existing `design/` rule wins and the idea
+  stays `Open` or `Parked` until a maintainer decides. `design/` changes only
   through the merge step.
 
-## Merge checklist (run before editing AGENT.md)
+## Merge checklist (run before editing design/)
 
 - [ ] The idea was re-scanned against every other open idea; conflicts recorded.
 - [ ] Each conflict has a resolution, not just a note.
-- [ ] The idea is written into `AGENT.md` as a rule, not as discussion.
-- [ ] Superseded `AGENT.md` lines are edited or removed, not left contradicting.
+- [ ] The idea is written into `design/` as a rule, not as discussion.
+- [ ] Superseded `design/` lines are edited or removed, not left contradicting.
 - [ ] Entry status set to `Merged` with the section reference.
-- [ ] `AGENT.md` did not grow more than the rule is worth (see its preamble).
+- [ ] `design/` did not grow more than the rule is worth (see its preamble).
 
 ## Ideas
 
-### IDEA-0001 — Stage ideas in `idea.md` before merging into `AGENT.md`
+### IDEA-0001 — Stage ideas in `idea.md` before merging into `design/`
 - **Status:** Merged
 - **Date:** 2026-09-20
 - **Author:** maintainer request
 - **Idea:** Keep a non-normative `idea.md` register that collects unreviewed
   ideas and resolves their conflicts before they are consolidated into
-  `AGENT.md`.
+  `design/`.
 - **Why:** An idea that contradicts another idea, or an existing rule, was
-  previously only discoverable while editing `AGENT.md` itself; there was no
+  previously only discoverable while editing `design/` itself; there was no
   place to hold ideas that are not yet reviewed.
-- **Touches:** `AGENT.md` §9 (layout), §12 (working agreement), new §17.
-- **Conflicts:** `AGENT.md` line 5 — "This file is the single source of truth
+- **Touches:** `design/` §9 (layout), §12 (working agreement), new §17.
+- **Conflicts:** `design/` line 5 — "This file is the single source of truth
   for how agents should work here." A second document could be read as a second
   source of truth.
-- **Resolution:** `idea.md` is declared non-normative in both files; `AGENT.md`
+- **Resolution:** `idea.md` is declared non-normative in both files; `design/`
   keeps primacy and is the only place a rule can live. §17 states the register
   is an inbox with no authority, so no rule is duplicated or diluted.
-- **Merged as:** `AGENT.md` §17 (and cross-references in §9, §12).
+- **Merged as:** `design/` §17 (and cross-references in §9, §12).
 
 ### IDEA-0002 — Scheduler-driven conversation loop with per-turn re-evaluation
 - **Status:** Merged
@@ -156,15 +157,15 @@ that conflict is part of merging it into `AGENT.md`.
     reintroduces OS notification limits. §5's "core makes no network calls"
     conflict changes shape, and §4's platform-scheduling conflict moves to the
     client.
-- **Resolution:** **Unresolved at merge time (2026-09-20); carried into `AGENT.md` as TODOs.** Decisions a
+- **Resolution:** **Unresolved at merge time (2026-09-20); carried into `design/` as TODOs.** Decisions a
   maintainer must make: (a) can the schedule be set in conversation, or does
   §7.2 forbid any schedule UI and therefore this idea? (b) confirm target
   selection stays the core's deterministic function and the model only phrases
   it; (c) define "update the dataset" as progress-only, or justify mutating
   class material; (d) define offline / missed-schedule / retry behaviour;
   (e) fix a bounded history + pending-points budget; (f) decide cost controls
-  for proactive turns. Existing `AGENT.md` rules win until each is settled.
-- **Merged as:** Merged 2026-09-20 into `AGENT.md` §18.1 (scheduler). The open
+  for proactive turns. Existing `design/` rules win until each is settled.
+- **Merged as:** Merged 2026-09-20 into `design/` §18.1 (scheduler). The open
   items (a)–(f) were carried across as the TODO in §18.1, not resolved.
 
 ### IDEA-0003 — Bundled German A1–C2 knowledge, with a level question on first run
@@ -217,14 +218,14 @@ that conflict is part of merging it into `AGENT.md`.
     the server host runs. §6.5's "a bundled default class must work with no
     network" becomes moot for the client, and the licence/provenance question
     now covers hosted content, not just a shipped asset.
-- **Resolution:** **Unresolved at merge time (2026-09-20); carried into `AGENT.md` as TODOs.** Decisions a
+- **Resolution:** **Unresolved at merge time (2026-09-20); carried into `design/` as TODOs.** Decisions a
   maintainer must make: (a) is "level" a field on Class or a separate concept?
   (b) which public sources, under what licence and attribution, may be bundled?
   (c) is the level question the only onboarding step, asked in chat, with a
   fallback? (d) does level gate targets or only order them? (e) how are bundled
-  datasets versioned and reconciled on update (§6.4)? Existing `AGENT.md` rules
+  datasets versioned and reconciled on update (§6.4)? Existing `design/` rules
   win until each is settled.
-- **Merged as:** Merged 2026-09-20 into `AGENT.md` §19.2 (built-in levels) and
+- **Merged as:** Merged 2026-09-20 into `design/` §19.2 (built-in levels) and
   §6.5. The open items (a)–(e) were carried across as the TODO in §19.2, not
   resolved.
 
@@ -279,7 +280,7 @@ that conflict is part of merging it into `AGENT.md`.
     stored by the server host, so §6.1's "authoritative store is the learner's
     device" becomes a server-side store with the privacy and auth obligations
     that follow. The §7.2 upload-surface conflict is unchanged.
-- **Resolution:** **Unresolved at merge time (2026-09-20); carried into `AGENT.md` as TODOs.** Decisions a
+- **Resolution:** **Unresolved at merge time (2026-09-20); carried into `design/` as TODOs.** Decisions a
   maintainer must make: (a) is upload allowed as an in-chat attachment, or does
   §7.2 forbid it? (b) what is the container for personal points — their own
   class with `origin: personal`, or a new kind? (c) duplicate/collision policy
@@ -287,8 +288,8 @@ that conflict is part of merging it into `AGENT.md`.
   (e) can personal points carry a level (IDEA-0003)? (f) are they in scheduler
   scope (IDEA-0002)? IDEA-0005 proposes a fixed dataset schema with
   model-assisted fitting — a candidate answer for (b) and (d), itself
-  unreviewed. Existing `AGENT.md` rules win until each is settled.
-- **Merged as:** Merged 2026-09-20 into `AGENT.md` §19.3 (personal points) and
+  unreviewed. Existing `design/` rules win until each is settled.
+- **Merged as:** Merged 2026-09-20 into `design/` §19.3 (personal points) and
   §19.1. The open items (a)–(f) were carried across as the TODO in §19.3, not
   resolved.
 
@@ -342,15 +343,15 @@ that conflict is part of merging it into `AGENT.md`.
     host and stored points live there; "arbitrary uploads cannot be ingested
     offline" is no longer a client-side constraint. The schema is now a
     server-side storage decision.
-- **Resolution:** **Unresolved at merge time (2026-09-20); carried into `AGENT.md` as TODOs.** Decisions a
+- **Resolution:** **Unresolved at merge time (2026-09-20); carried into `design/` as TODOs.** Decisions a
   maintainer must make: (a) freeze and version the schema, and decide whether
   an "other/unclassified" kind is allowed; (b) forbid fuzzy matching for
   attribution, in writing (§6.2); (c) canonical normalization + duplicate
   policy for deterministic IDs; (d) fit-failure and learner-confirmation path,
   in chat; (e) whether fitting lives in the core or outside it (it is a
   model + transport concern — §3/§8); (f) migration behaviour when the schema
-  changes. Existing `AGENT.md` rules win until each is settled.
-- **Merged as:** Merged 2026-09-20 into `AGENT.md` §19.1 (one schema,
+  changes. Existing `design/` rules win until each is settled.
+- **Merged as:** Merged 2026-09-20 into `design/` §19.1 (one schema,
   model-fitted). The open items (a)–(f) were carried across as the TODO in
   §19.1, not resolved.
 
@@ -390,7 +391,7 @@ that conflict is part of merging it into `AGENT.md`.
     decision.
     → **RESOLVED AND MERGED 2026-09-20: the maintainer chose the reversal —
     the model picks the branch, because user intent has no deterministic
-    derivation. Now normative in `AGENT.md` §2.1 and §6.3.**
+    derivation. Now normative in `design/` §2.1 and §6.3.**
   - **§2.1 "our turn is: load context → one structured model call → validate →
     update progress. Linear, seconds long."** A per-message workflow with
     several classification calls changes latency, cost, and complexity, so it
@@ -430,13 +431,13 @@ that conflict is part of merging it into `AGENT.md`.
     and the "flowchart" can be LangGraph's own graph plus its Studio
     visualization.
 - **Resolution:** **Partially resolved at merge time (2026-09-20); the remaining
-  items are carried into `AGENT.md` as TODOs.**
+  items are carried into `design/` as TODOs.**
   - **Decided 2026-09-20 (decision (b), control-flow conflict): branch
     selection is model-determined.** User intent — a genuine reply vs. a
     linguistic question vs. drift — has no deterministic derivation, so the
     model chooses the branch for each incoming message. What this means (now
     applied):
-    - `AGENT.md` §2.1's reason "it assumes the model decides control flow; …
+    - `design/` §2.1's reason "it assumes the model decides control flow; …
       that is a design mismatch" was **over-broad and has now been amended**:
       that objection is withdrawn, and `linear` / `one structured model call`
       wording is replaced. The portability objections to LangGraph (Python/JS
@@ -453,7 +454,7 @@ that conflict is part of merging it into `AGENT.md`.
       structure at runtime. This keeps the flowchart a reviewable artifact and
       the branches unit-testable (§11).
     - **Applied 2026-09-20:** the maintainer chose the recommended option, so
-      these amendments are live in `AGENT.md` now. The rest of IDEA-0006 is
+      these amendments are live in `design/` now. The rest of IDEA-0006 is
       still open, so this file wins on every point not yet decided.
   - **Also decided 2026-09-20 (decision (d), §7.3 conflict): drift is handled
     by a soft re-anchor, never a clamp.** This conforms to §7.3 as written, so
@@ -465,8 +466,8 @@ that conflict is part of merging it into `AGENT.md`.
     (d) how drift is detected and quantified, and how large the drift allowance
     is; (e) where the workflow graph is stored, versioned, and reviewed (the
     LangGraph graph source, plus any diagram); (f) the full branch set. Existing
-    `AGENT.md` rules win on every point not yet decided.
-- **Merged as:** Merged 2026-09-20 into `AGENT.md` §18.2 (per-message workflow),
+    `design/` rules win on every point not yet decided.
+- **Merged as:** Merged 2026-09-20 into `design/` §18.2 (per-message workflow),
   plus the earlier control-flow decision in §2.1 and §6.3. The open items (c)–(f)
   were carried across as the TODO in §18.2, not resolved.
 
@@ -541,8 +542,8 @@ that conflict is part of merging it into `AGENT.md`.
     progress dashboard and break it.
 - **Resolution:** **Merged 2026-09-20 by maintainer instruction.** The decided
   architecture (LangGraph backend, Discord first, then Telegram, website, phone
-  thin clients) is now normative in `AGENT.md`. Remaining decisions, carried into
-  `AGENT.md` as TODOs: (a) is the server host self-hostable, and
+  thin clients) is now normative in `design/`. Remaining decisions, carried into
+  `design/` as TODOs: (a) is the server host self-hostable, and
   what is the default deployment? (b) what is stored server-side and what, if
   anything, stays on the device? (c) auth and **cross-channel learner identity** —
   how are Discord, Telegram, web, and phone accounts linked to one learner? (d) do
@@ -550,7 +551,404 @@ that conflict is part of merging it into `AGENT.md`.
   and for what reason? (f) how are §1 and §7.1 rewritten — is "local-first"
   removed, or redefined as "self-hostable"? (g) how much of the §2 prior art
   (one dispatcher for bot `Update`, HTTP, WebSocket) is adopted as-is rather than
-  reinvented? Existing `AGENT.md` rules win on every point not yet decided.
-- **Merged as:** Merged 2026-09-20 into `AGENT.md` §1, §2.1, §2.2, §3, §4, §5,
+  reinvented? Existing `design/` rules win on every point not yet decided.
+- **Merged as:** Merged 2026-09-20 into `design/` §1, §2.1, §2.2, §3, §4, §5,
   §6.1, §6.6, §7.1, §7.10, §9, §10, §11, §12.7, §15, and §16. The open items
   (a)–(g) were carried across as TODOs in §5, §6.6, and §10, not resolved.
+- **Update (2026-09-27):** open item **(a)** — "is the server host self-hostable,
+  and what is the default deployment?" — is resolved by IDEA-0010 / D-028 in
+  [`design/75-deployment.md`](design/75-deployment.md).
+
+### IDEA-0008 — Access control: identity anchored to the Discord account, data scoped by user id
+- **Status:** Merged
+- **Date:** 2026-09-20
+- **Author:** maintainer request
+- **Idea:** Access control starts with **identity tied to a Discord account** —
+  the v1 channel (§5). Material and progress data are **persisted**, and
+  **access is controlled by the Discord user id**: a learner's rows are readable
+  and writable only for that id. **Telegram stays a future option**, to be linked
+  to the same learner when that channel ships (§5 step 2).
+- **Why:** The channel already authenticates the person, so no password, email,
+  or login form is needed (§7.2), and identity becomes explicit rather than
+  guessed (§6.6). It is the smallest change that makes shared server-side data
+  safe for more than one learner.
+- **Touches:** §3, §4, §5, §6.1, §6.6, §7.2, §7.10, §9, §12.4, §12.7, §15,
+  §18.1.
+- **Conflicts:**
+  - **§5 channel order — no conflict.** **RESOLVED 2026-09-20: Discord is the v1
+    channel and the identity anchor; Telegram remains the second channel and is
+    linked later.** Consistent with §5 as merged.
+  - **§3/§4/§7.10 — channel-agnostic core.** Scoping data by a *Discord* user id
+    puts a channel concept into the domain, which §3 forbids. Fix: persist
+    against an opaque **`learner_id`** and keep the Discord id in an
+    identity/link table owned by the adapter layer. Otherwise adding Telegram
+    later means migrating every row.
+  - **§6.6 — one learner.** If the anchor *is* a channel id, a second channel
+    cannot attach without a linking table anyway, so identity becomes
+    channel-shaped. The anchor should be `learner_id`, with the Discord id as
+    the first linked credential and Telegram as the next.
+  - **§5 roadmap — future clients.** A Discord user id proves nothing to the
+    Telegram bot, the website, or a phone thin client (§5 steps 2–4).
+    Channel-id-only access control holds only while the channel is the sole
+    door; a session/token layer is needed later.
+  - **§15 ask-first + §12.7.** Access control and auth are explicitly ask-first,
+    and this is also a storage-schema decision (§12.4). Discord user ids are
+    personal data: define retention, whether they are logged, and what else is
+    stored alongside (display name, username).
+  - **Impersonation blast radius.** The boundary is only as strong as the bot
+    token and Discord's guarantee about the sender (§12.7, §15). State what
+    happens if the token leaks and how a request is authenticated before it is
+    trusted.
+  - **§18.1 scheduler.** A proactive session must address the right linked
+    identity on each channel, so the scheduler resolves `learner_id` → channel
+    identity, never the reverse.
+- **Resolution:** **Merged 2026-09-20 by maintainer instruction**, with the
+  recommended anchor applied. **Decided:** the anchor is an opaque `learner_id`,
+  and the Discord user id — the numeric snowflake, never the username or display
+  name — is its first linked credential (decisions (a) and (b)). **Still open,
+  carried into `design/` as the TODO in §6.7:** retention and deletion policy;
+  whether channel ids are logged; provisioning vs. explicit opt-in on first
+  contact; access control for Telegram, the website, and phone clients later;
+  and recovery if the Discord account is lost.
+- **Merged as:** Merged 2026-09-20 into `design/` §6.6 (learner identity),
+  §6.7 (access control), §9, §11, §15, and §16.
+
+### IDEA-0009 — Learner picks language and level; levels, settings, and built-in German content
+- **Status:** Merged
+- **Date:** 2026-09-27
+- **Author:** maintainer request; agent-proposed, maintainer-decided
+- **Idea:** On first contact the app asks, in conversation, which **target
+  language** and which **level** the learner is studying, and never opens a
+  session before that is answered. Any time after, the learner changes language,
+  level, chapter, or which earlier levels are in scope through `/settings`,
+  `/level`, `/language`, `/chapter`, `/include`, `/exclude`. A CEFR level
+  (A1–C2) is **one built-in class**; a chapter/unit is metadata on knowledge
+  points plus a per-learner cursor, so a learner who says "A1.2, chapter 4" is
+  modelled as level A1 with a unit cursor. The learner may **include or exclude
+  previous levels** as a review pool. German ships as built-in A1–C2 classes
+  derived from Goethe and telc sources, with a frequency-based fallback at C
+  levels. A **custom level is a personal class**, buildable from uploaded
+  pdf/ppt/word material through a model-fitting pipeline.
+- **Why:** today the operator picks one class for everyone
+  (`TALK_CLASS_PATH`) and a learner with no class is told to ask the operator.
+  That removes the product's core promise — show up and talk — and makes the
+  built-in German knowledge unreachable. It also leaves no way to say what you
+  are studying, no way to review an earlier level, and no way to bring your own
+  material beyond a hand-written JSON file.
+
+- **Decisions (maintainer, 2026-09-27):**
+  - **D1 — level, class, chapter, previous levels.** `ClassRecord` gains
+    `level`; one class per (target language, CEFR level) per learner. Knowledge
+    points gain `unit` (label) + `unitOrder`; settings carry
+    `knownThroughUnit`; the current chapter is **derived** (lowest unit at or
+    above the cursor with unseen points), never stored. Steering's candidate
+    pool becomes the primary level's points **plus the included previous
+    levels' points**, deduped by knowledge-point id; only the primary level's
+    at-or-above-cursor unseen points count as new/due, and unseen points
+    elsewhere are background (score 0, fallback only). Sort becomes
+    `(score, unitOrder, id)`. Weights are unchanged. Default: include all
+    previous levels.
+  - **D2 — onboarding.** Deterministic and model-free, asked in chat; tolerant
+    text parsing with a re-ask on unknown input. Changes afterwards through the
+    commands above. **Text-only in v1**: Discord select menus are not used
+    because design/20 §4.2 makes chat the entire interface; a channel-agnostic
+    choices contract is the later route, not taken now.
+  - **D3 — custom level and uploads.** A custom level is a personal class
+    (`origin: "personal"`), seeded from a built-in level or empty; the mapping
+    is the class's point set. Learners may upload pdf/ppt/word material, which a
+    model-call pipeline condenses into knowledge points.
+  - **D4 — German sources.** Goethe-derived: Goethe A1/A2/B1 Wortlisten plus the
+    DTZ list; telc's lesson-organized B2-Beruf Wortschatzlisten for B2; C1/C2
+    fall back to frequency bands + CEFR descriptors validated against the ÖSD C1
+    and Goethe C2 model papers. Goethe/telc content is copyrighted, so the
+    recorded stance is **derive, attribute, keep `raw_source` pointers, and
+    vendor no source PDFs**. `D-019` becomes decided-with-risk on that basis.
+  - **D5 — storage.** New `learner_settings` table, class/point schema change,
+    `CLASS_SCHEMA_VERSION` bump, and a tested migration from a populated v1
+    database.
+  - **D6 — "not sure".** The level question includes "not sure"; it resolves to
+    the lowest level and stays changeable at any time. No placement test.
+
+- **Touches:** design/30 §1, §3, new settings section; design/40 §2–4;
+  design/50 §1, §3.2 + `design/turn-graph.mmd`; design/60 §1, §3, §4, new
+  pipeline section; design/70 §1 (new parsing dependencies); design/80 (new
+  rows, D-019); README (commands, env names, privacy).
+- **Conflicts:**
+  - **IDEA-0003 (merged, items (a)–(e) still open).** Its carried TODOs —
+    is "level" a `Class` field, which sources, is the level question the only
+    onboarding step, does level gate or only order targets, how is the bundle
+    versioned — are exactly what D1/D2/D4/D5 answer. Conflict: the design/60 §3
+    TODO still says these are open. *Resolution:* this idea resolves all five;
+    design/60 §3's TODO is rewritten, and the new open item is only the C1/C2
+    fallback.
+  - **design/30 §1, example "German A1.2, chapter 8".** The example implies a
+    class is a chapter; D1 makes the class a CEFR level and the chapter a unit.
+    *Resolution:* amend the §1 example and state the granularity explicitly.
+  - **design/50 §1, "exactly two entry points".** Onboarding adds a third
+    documented route that runs before `decide` and makes no model call.
+    *Resolution:* document it as a deterministic pre-decision route, update
+    §3.2 and the diagram in the same change, and extend
+    `tests/design-conformance.test.ts`.
+  - **design/40 §1–§4, single-class scope + id tie-break.** Steering's input is
+    one `ClassRecord` and ties break on `point.id` (a hash), so new material
+    currently appears in arbitrary order and a second level cannot be in scope.
+    *Resolution:* the scope resolver (D1) feeds the same weights a pool across
+    levels; the tie-break gains `unitOrder`. Steering weights are explicitly
+    unchanged; this is still an ask-first change and is recorded as one.
+  - **design/20 §4.2, "chat is the entire interface".** Discord select menus
+    would contradict it. *Resolution:* text-only in v1 (D2); no design change is
+    made now, and the choices contract is parked, not rejected.
+  - **IDEA-0005 / design/60 §1, model fitting and "the model never assigns
+    IDs"; §1 TODO "where fitting runs (core vs adapter)".** *Resolution:*
+    document extraction in an adapter behind a new port, validation and
+    knowledge-point id assignment in `core/`, orchestration in `engine/`; the
+    model still only proposes content.
+  - **IDEA-0002 (merged, scheduler).** A scheduled opening needs a class and
+    targets, so it must not fire before onboarding completes. *Resolution:*
+    `startSession` returns the onboarding prompt instead of opening.
+  - **IDEA-0008 (merged, access control) and its retention TODO.** Settings and
+    uploaded documents are new learner data. *Resolution:* both are
+    `learner_id`-scoped like existing tables; the retention/logging TODO in
+    design/30 §7 gains them. No structural conflict.
+  - **AGENT.md §5 ask-first list.** New parsing dependencies (lockfile), the
+    storage schema, steering behavior, prompts, and the graph are all ask-first.
+    *Resolution:* the maintainer approved them in this review; each is recorded
+    as a decision row, and the merge must still run `pnpm verify`.
+  - **Licensing.** Goethe and telc material is copyrighted and this repository
+    is AGPL-3.0. *Resolution:* accepted by the maintainer on the derive-and-
+    attribute basis in D4; recorded as risk, not as a clean licence.
+- **Resolution:** D1–D6 are decided. The only item not settled by this review
+  is the **C1/C2 source fallback** — no exam body publishes a C1/C2 word list
+  (Goethe's own C2 handbook points at the commercial *Profile deutsch A1–C2
+  v2.0*); the proposal is frequency bands (A1 1k, A2 2k, B1 3k, B2 5k, C1 8k,
+  C2 16k) plus CEFR descriptors, validated against the ÖSD C1 and Goethe C2
+  model papers, and labelled as an estimate. Until that is confirmed, the C-level
+  bundles stay a TODO in design/60 §3.
+- **Merged as:** Merged 2026-09-27 into `design/30-domain-model.md` §1, §3, §5,
+  §8; `design/40-steering.md` §1–§4; `design/50-orchestration.md` §1, §2, §2.1,
+  §3.2, §3.4 + `design/turn-graph.mmd`; `design/60-ingestion.md` §1, §3, §4, §5;
+  `design/70-stack.md` §1, §2, §5; `design/80-decisions.md` (D-019, D-022–D-026);
+  `design/00-index.md`; and `AGENT.md` §1, §5. `tests/design-conformance.test.ts`
+  was updated in the same change. The C1/C2 fallback stays a TODO in
+  `design/60-ingestion.md` §3.
+
+### IDEA-0010 — Official deployment pathway: one systemd unit per host
+- **Status:** Merged
+- **Date:** 2026-09-27
+- **Author:** maintainer request
+- **Idea:** Give the server an official deployment pathway instead of a README
+  `pnpm start`: a platform-neutral deployment **contract** (one process per bot
+  token and per database, unprivileged, no inbound listener, `.env` secrets,
+  graceful `SIGTERM`, durable `var/`), plus a v1 reference implementation — a
+  systemd unit template and a one-file installer in `deploy/` that installs,
+  upgrades, and uninstalls the service.
+- **Why:** `design/70-stack.md` §1 carried "Deployment / self-hosting: TODO", and
+  the only documented way to run the server was `pnpm start` by hand. A
+  hand-started server is easy to duplicate — two processes on one bot token and
+  one SQLite file — and dies with the shell that started it. An operator who is
+  not the maintainer needs one supported, repeatable path.
+- **Touches:** new `design/75-deployment.md`; `design/70-stack.md` §1, §2, §3, §5;
+  `design/00-index.md`; `design/80-decisions.md` (D-028, D-029); new `deploy/`;
+  `README.md`.
+- **Conflicts:**
+  - **IDEA-0007 open item (a), "is the server host self-hostable, and what is the
+    default deployment?"** This is exactly what this idea settles. *Resolution:*
+    answered by D-028; item (a) is marked resolved in IDEA-0007.
+  - **`MVP.md` "Deployment: single process, `.env`-driven, Dockerfile
+    deferred."** Consistent, and now normative in `design/` instead of only in
+    the non-normative build report. *Resolution:* no contradiction; the design
+    doc is the specification.
+  - **`design/10-overview.md` §4 — "self-hostable" with no operational path.**
+    §4 states the product guarantee but not how to achieve it. *Resolution:* §4
+    keeps the guarantee; `design/75-deployment.md` owns the pathway and §4 is
+    unchanged.
+  - **`AGENT.md` §5 — deployment configuration is ask-first.** *Resolution:* the
+    maintainer requested the pathway in this review, which is the approval; the
+    merge reconfigures no live host.
+  - **`tsx` is a dev dependency used as the runtime**, so `pnpm install --prod`
+    would not install it. *Resolution:* v1 installs dev dependencies and records
+    the compiled production artifact as D-029 (deferred), rather than silently
+    changing the dependency manifest, which is itself ask-first.
+- **Resolution:** the contract is portable and the systemd unit is the v1
+  reference; containers, a compiled artifact, TLS, high availability, and backup
+  automation are explicit non-goals ([`design/75-deployment.md`](design/75-deployment.md) §6).
+- **Merged as:** Merged 2026-09-27 into the new `design/75-deployment.md`;
+  `design/70-stack.md` §1 (TODO replaced), §2 (`deploy/`), §3 (installer command),
+  §5 (artifact tests); `design/00-index.md`; `design/80-decisions.md`
+  (D-028–D-029); `deploy/talk-naturally.service.in`, `deploy/install.sh`;
+  `tests/deployment.test.ts`; `README.md`.
+
+### IDEA-0011 — Learner-triggered "new conversation" that asks a new question
+- **Status:** Merged
+- **Date:** 2026-09-27
+- **Author:** maintainer request
+- **Idea:** Give the learner an explicit entry point to start a **new
+  conversation** — the chat command `/new`, with `/start` as its alias, available
+  as a typed command on every channel and as a Discord slash command. It ends the
+  question currently on the table and the app answers by opening a fresh session
+  and asking a **new** question, not the one the learner left behind.
+- **Why:** The app already asks the first question itself and then holds the
+  learner on the question on the table until they answer (D-031). That rule has
+  no learner-controlled exit: the only on-demand start was the Discord `/start`
+  slash command, a typed `/start` was not recognised at all, and no entry point
+  was framed as "start over". A learner who wants something new had to answer or
+  attempt the old question first, and channels without slash commands had no
+  on-demand start at all.
+- **Touches:** `design/50-orchestration.md` §1, §2, §2.1, §3.3;
+  `design/80-decisions.md` (D-032); `core/prompts/session.ts`;
+  `engine/session.ts`, `engine/types.ts`, `engine/index.ts`;
+  `frontends/discord/bot.ts`; `hosts/cli/main.ts`; `README.md`; tests.
+- **Conflicts:**
+  - **D-031 / `design/50-orchestration.md` §3.3 — "The question on the table is
+    re-asked, never replaced."** A new conversation replaces it without an
+    answer. *Resolution:* the rule keeps its force for learner **messages**; the
+    new-conversation command is the one explicit, learner-triggered exception,
+    written into §2 and §3.3 and recorded as D-032. The turn graph is untouched —
+    `/new` never enters it.
+  - **`design/50-orchestration.md` §2 — "A session never opens before onboarding
+    is complete."** *Resolution:* unchanged. `/new` before setup returns the
+    pending onboarding question (`handledAs: needs_onboarding`), exactly like a
+    scheduled start, so it is not a bypass.
+  - **`design/50-orchestration.md` §2 / D-030 — the opening "must feel like a
+    friendly person saying hello, not a study reminder" because the learner did
+    not ask for the session.** *Resolution:* the opening prompt gains a
+    learner-requested variant and is version-bumped to `opening-v2`; scheduled
+    and onboarding openings keep the existing framing.
+  - **`design/40-steering.md` §4 and D-015 — steering weights and target
+    selection.** Does "a new question" mean a new target? *Resolution:* no
+    steering change. Selection is unchanged; "new" is a new question, and the
+    opening is told not to repeat the question the learner left behind. Changing
+    the weights or the tie-break stays ask-first (`AGENT.md` §5).
+  - **`design/20-architecture.md` §4.2 — "chat is the entire interface", and
+    D-026 defers menus.** *Resolution:* `/new` is a chat command like `/level`;
+    no new surface, no menu, and no channel-specific concept in the core.
+  - **IDEA-0006 / IDEA-0002 (both Merged) — the per-turn re-anchor workflow and
+    its re-ask.** *Resolution:* no conflict; the new entry point sits beside the
+    turn workflow and reuses the linear session start, not the graph.
+- **Resolution:** `/new` (alias `/start`) is the learner-owned way past the
+  question on the table; it reuses session start with `reason:
+  new_conversation`, and the opening is told not to repeat the previous question.
+  No graph change, no steering change, no new storage.
+- **Merged as:** Merged 2026-09-27 into `design/50-orchestration.md` §1 (fourth
+  entry point), §2 (the command and its rules), §2.1 (`startConversation`),
+  §3.3 (the exception); `design/80-decisions.md` D-032; `core/prompts/session.ts`
+  (`opening-v2`); `engine/session.ts`, `engine/types.ts`, `engine/index.ts`;
+  `frontends/discord/bot.ts`; `hosts/cli/main.ts`; `README.md`.
+
+### IDEA-0012 — Telegram as the second chat channel
+- **Status:** Merged
+- **Date:** 2026-09-27
+- **Author:** maintainer request
+- **Idea:** Ship **Telegram** as the second chat channel (D-003 step 2), at full
+  parity with Discord: text turns, `/new`/`/start`, the settings commands,
+  document uploads, and `/model`. **One server process serves every configured
+  channel** over one engine, one database, and one scheduler. A channel identity
+  is linked per learner; the same person on Discord and Telegram is **two
+  learners** until explicit linking exists.
+- **Why:** D-003 already fixed the channel order and D-002/D-010 made channels
+  driving adapters, so the architecture was built for this. Telegram reaches
+  learners where Discord may not, and the Bot API needs no inbound listener, so it
+  fits the deployment contract without a reverse proxy.
+- **Touches:** `design/72-channels.md` (new); `design/00-index.md`;
+  `design/10-overview.md` §2, §4; `design/30-domain-model.md` §6–7;
+  `design/70-stack.md` §1–2; `design/75-deployment.md` §1, §3;
+  `design/80-decisions.md` (D-034); `frontends/telegram/`,
+  `frontends/model-admin.ts`; `hosts/config.ts`, `hosts/server/main.ts`;
+  `deploy/install.sh`; `.env.example`; `README.md`; tests.
+- **Conflicts:**
+  - **D-003 / `design/10-overview.md` §4 — channel order and "do not start with
+    every channel."** *Resolution:* Telegram is step 2 and is added as one
+    adapter; the website and phone clients stay unbuilt.
+  - **`design/30-domain-model.md` §6 — "Telegram is not linked until that channel
+    ships."** It ships now. *Resolution:* identity stays per channel and explicit:
+    first contact on Telegram creates its own `learner_id`; no automatic merge, so
+    the same person on two channels is two learners (maintainer decision). §6 and
+    §7's TODO are rewritten.
+  - **`design/75-deployment.md` §1.1 — "exactly one instance per bot token and per
+    database file," read as one Discord process.** *Resolution:* one process
+    serves every configured channel and still owns the only writable handle on the
+    database and each token; the contract is reworded to "one instance per
+    database, and per bot token."
+  - **`design/20-architecture.md` §5 / D-009 — "no provider SDK, use `fetch`" vs.
+    `discord.js`.** *Resolution:* no conflict. The no-SDK rule governs the model
+    port; Discord keeps its SDK because the gateway is a stateful protocol.
+    Telegram's Bot API is plain HTTPS/JSON, so the adapter uses `fetch` behind an
+    injectable `TelegramTransport` and adds **no dependency** to the lockfile.
+  - **`design/20-architecture.md` §4.10 — adding a channel must not change
+    existing behavior.** *Resolution:* the engine, core, Discord adapter, graph,
+    prompts, steering, and storage are untouched. The only cross-cutting edit is
+    the composition root building a channel list, plus moving the channel-neutral
+    `ModelAdmin` type to `frontends/model-admin.ts` (re-exported, so every
+    existing import still resolves).
+  - **`design/75-deployment.md` §1.2 — no inbound listener.** *Resolution:* long
+    polling dials out; no webhook, port, TLS, or reverse proxy.
+  - **`design/30-domain-model.md` §7 — material and progress scoped to one
+    `learner_id`.** A Telegram group would put several people behind one identity.
+    *Resolution:* the adapter answers private chats only.
+  - **D-018 — persisting a learner model credential (OPEN).** `/model` accepts a
+    key on Telegram as it does on Discord; it stays in memory only, and the reply
+    warns that Telegram keeps the message. A flow that avoids the chat history is
+    a TODO.
+- **Resolution:** Telegram ships as one more driving adapter. No core, engine,
+  graph, prompt, steering, or storage change; the scheduler already resolves
+  `learner_id` → channel identity, so it did not need a channel dimension.
+- **Merged as:** Merged 2026-09-27 into `design/72-channels.md` (the whole
+  document); `design/10-overview.md` §2, §4; `design/30-domain-model.md` §6–7;
+  `design/70-stack.md` §1–2; `design/75-deployment.md` §1, §3;
+  `design/80-decisions.md` D-034.
+
+### IDEA-0013 — Operator approval before any learner can run up a model bill
+- **Status:** Merged
+- **Date:** 2026-09-27
+- **Author:** maintainer request
+- **Idea:** Gate Discord and Telegram users behind an **operator approval** before
+  they can access anything. The requirement is explicitly about cost: **any
+  workflow that involves an LLM call must be behind approval**, so bots and
+  scanners that find the public bot cannot run up inference bills. First contact
+  creates a pending request; an operator approves or denies from a CLI, with
+  machine-readable output so a tool-calling operator can drive it.
+- **Why:** Every useful conversation makes a billed remote model call
+  ([20-architecture.md §5](20-architecture.md)). A publicly reachable bot is
+  otherwise an open wallet. Onboarding is model-free (D-023) but completes into a
+  session that calls the model (D-030), so the gate has to precede the whole flow.
+- **Touches:** `design/74-access.md` (new); `design/00-index.md`;
+  `design/30-domain-model.md` §6–7; `design/50-orchestration.md` §2;
+  `design/70-stack.md` §2–3; `design/80-decisions.md` (D-036);
+  `core/ports/storage.ts`; `adapters/sqlite-storage.ts`,
+  `adapters/memory-storage.ts`; `frontends/access.ts`,
+  `frontends/discord/bot.ts`, `frontends/telegram/bot.ts`;
+  `engine/access-guard.ts`, `engine/types.ts`; `hosts/admin/`,
+  `hosts/server/main.ts`; `package.json`; `README.md`; tests.
+- **Conflicts:**
+  - **`design/30-domain-model.md` §6 — "never store a username or display name"
+    as identity.** The operator has to recognise who is asking for access.
+    *Resolution:* a narrow amendment — a mutable display label may be stored **on
+    the access request only**, for review. The key stays the platform's numeric
+    id; the label is never a key, lookup, or access-control input and is not
+    copied into the link or a domain record.
+  - **`design/30-domain-model.md` §7 — first-contact provisioning vs. explicit
+    opt-in was an open TODO.** *Resolution:* resolved as the approval gate; the
+    TODO is rewritten to point at [74-access.md](74-access.md).
+  - **`design/50-orchestration.md` §2 / D-030 — the first question is asked
+    automatically after setup.** *Resolution:* unchanged for approved learners;
+    for a pending one, setup never starts. The engine guard also stops a
+    **revoked** learner's scheduled session before the opening model call.
+  - **`design/75-deployment.md` §1.1 — one instance per database.** The admin CLI
+    is a second process on the same SQLite file. *Resolution:* it is not a server
+    instance (no channel connection, no scheduler, exits after one command); WAL
+    plus `busy_timeout` makes concurrent access safe.
+  - **Storage schema — a new table is ask-first.** *Resolution:* a new
+    `access_requests` table with an idempotent, tested backfill that grandfathers
+    every existing `channel_links` row as approved, so no current learner is
+    locked out.
+  - **`design/20-architecture.md` §4.2 — chat is the entire interface.** A learner
+    still only chats; approval adds an **operator** CLI, not a learner screen.
+  - **`AGENT.md` §5 — auth and access control are ask-first.** This entry and
+    D-036 are that decision, taken by the maintainer.
+- **Resolution:** unapproved identities create a pending request and no learner;
+  adapters answer them model-free; `guardEngine` makes "no model call without
+  approval" mechanical for channels and scheduler alike; approval is a
+  non-interactive `pnpm admin` tool with `--json`.
+- **Merged as:** Merged 2026-09-27 into `design/74-access.md` (the whole
+  document); `design/30-domain-model.md` §6–7; `design/50-orchestration.md` §2;
+  `design/70-stack.md` §2–3; `design/80-decisions.md` D-036.
