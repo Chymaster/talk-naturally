@@ -13,8 +13,9 @@
     "test:watch": "vitest",
     "boundary": "tsx tools/boundary-check.ts",
     "demo:cli": "tsx hosts/cli/main.ts",
+    "admin": "tsx --env-file-if-exists=.env hosts/admin/main.ts",
     "stub:model": "tsx tools/stub-provider.ts",
-    "start": "tsx hosts/server/main.ts",
+    "start": "tsx --env-file-if-exists=.env hosts/server/main.ts",
     "verify": "pnpm typecheck && pnpm boundary && pnpm test"
   },
   "dependencies": {

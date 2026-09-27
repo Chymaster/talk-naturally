@@ -1,0 +1,49 @@
+# talk-naturally server unit, rendered from deploy/talk-naturally.service.in by
+# deploy/install.sh (design/75-deployment.md §2). The installer fills in the
+# checkout path, the run user and group, and the pnpm binary. Edit the template,
+# not the installed unit.
+#
+# Secrets are deliberately absent: the app reads its own .env through
+# `tsx --env-file-if-exists=.env` (design/75-deployment.md §1.4).
+
+[Unit]
+Description=talk-naturally server (Discord channel)
+Documentation=file://@REPO_DIR@/design/75-deployment.md
+After=network-online.target
+Wants=network-online.target
+# Bound a crash loop instead of restarting forever (design/75-deployment.md §1.7).
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=@RUN_USER@
+Group=@RUN_GROUP@
+WorkingDirectory=@REPO_DIR@
+Environment=NODE_ENV=production
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=@PNPM@ start
+
+Restart=on-failure
+RestartSec=5
+
+# The host stops the scheduler, closes the channel and storage, then exits 0
+# (design/75-deployment.md §1.6); give it room to finish.
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=talk-naturally
+
+# Conservative hardening. ProtectHome is deliberately not set: the checkout and
+# var/ may live under /home (design/75-deployment.md §2.1).
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target
