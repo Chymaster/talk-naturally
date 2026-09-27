@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "languages": [
+    {
+      "language": "German",
+      "sourceLanguage": "English",
+      "levels": [
+        {
+          "level": "A1",
+          "title": "German A1",
+          "file": "german/A1.json",
+          "units": [
+            "Begrüßung und Vorstellung",
+            "Zahlen, Uhrzeit und Termine",
+            "Alltag: Familie, Arbeit und Wohnen",
+            "Einkaufen und Essen",
+            "Wege und Verkehr"
+          ]
+        },
+        {
+          "level": "A2",
+          "title": "German A2",
+          "file": "german/A2.json",
+          "units": [
+            "Reisen und Urlaub",
+            "Gesundheit und Körper",
+            "Arbeit und Beruf",
+            "Medien und Kommunikation",
+            "Feste, Gefühle und Vergleiche",
+            "Umwelt und Zukunft"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Chinese",
+      "sourceLanguage": "English",
+      "levels": [
+        {
+          "level": "A1",
+          "title": "Chinese A1",
+          "file": "chinese/A1.json",
+          "units": [
+            "问候和介绍",
+            "数字、时间和日期",
+            "家人、工作和住处",
+            "买东西和吃饭",
+            "问路和交通"
+          ]
+        },
+        {
+          "level": "A2",
+          "title": "Chinese A2",
+          "file": "chinese/A2.json",
+          "units": [
+            "旅行和度假",
+            "健康和身体",
+            "工作和职业",
+            "媒体和通讯",
+            "节日、感情和比较",
+            "环境和未来"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "title": "German A1",
+  "source_language": "English",
+  "target_language": "German",
+  "level": "A1",
+  "origin": "builtin",
+  "points": [
+    {
+      "kind": "grammar",
+      "title": "Verb in second position",
+      "detail": "In a plain statement the conjugated verb takes the second position, so a time word can open the sentence: Ich heiße Anna. Heute arbeite ich.",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "Begrüßung und Vorstellung",
+      "unit_order": 1
+    },
+    {
+      "kind": "grammar",
+      "title": "W-questions: wer, wie, woher",
+      "detail": "A question word comes first and the conjugated verb follows straight after it: Wie heißt du? Woher kommst du?",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "Begrüßung und Vorstellung",
+      "unit_order": 1
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Introducing yourself with und",
+      "detail": "Two main clauses can be joined with und, and the verb stays in second position in each of them: Ich heiße Anna und ich komme aus Kanada.",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "Begrüßung und Vorstellung",
+      "unit_order": 1
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Das ist … / Das sind …",
+      "detail": "Use das ist for one person or thing and das sind for several: Das ist mein Bruder. Das sind meine Eltern.",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "Begrüßung und Vorstellung",
+      "unit_order": 1
+    },
+    {
+      "kind": "vocab",
+      "title": "die Begrüßung, der Gruß",
+      "detail": "die Begrüßung is the act of greeting and der Gruß the greeting itself; Guten Morgen and Guten Tag fit different times of day.",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "Begrüßung und Vorstellung",
+      "unit_order": 1
+    },
+    {
+      "kind": "vocab",
+      "title": "der Vorname, der Nachname",
+      "detail": "der Vorname is the first name and der Nachname the surname; forms in German-speaking countries usually ask for both.",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "Begrüßung und Vorstellung",
+      "unit_order": 1
+    },
+    {
+      "kind": "grammar",
+      "title": "Personal pronouns in the nominative",
+      "detail": "ich, du, er/sie/es, wir, ihr, sie/Sie are the subject forms, and the verb ending changes with each one.",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "Zahlen, Uhrzeit und Termine",
+      "unit_order": 2
+    },
+    {
+      "kind": "grammar",
+      "title": "Separable verbs: aufstehen, anfangen",
+      "detail": "A separable prefix moves to the end of a main clause: Ich stehe um sieben auf. Der Kurs fängt um neun an.",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "Zahlen, Uhrzeit und Termine",
+      "unit_order": 2
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Asking and telling the time",
+      "detail": "Wie viel Uhr ist es? is answered with Es ist …; note that halb neun means half way to nine, that is 8:30.",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "Zahlen, Uhrzeit und Termine",
+      "unit_order": 2
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Putting a time expression first",
+      "detail": "A time expression can open the sentence, but the verb still comes second and the subject moves behind it: Am Montag habe ich Zeit.",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "Zahlen, Uhrzeit und Termine",
+      "unit_order": 2
+    },
+    {
+      "kind": "vocab",
+      "title": "die Uhrzeit, der Termin",
+      "detail": "die Uhrzeit is the time of day and der Termin an appointment; einen Termin machen means to arrange one.",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "Zahlen, Uhrzeit und Termine",
+      "unit_order": 2
+    },
+    {
+      "kind": "vocab",
+      "title": "Weekdays with -s: montags, dienstags",
+      "detail": "Adding -s to a weekday means every week on that day: montags arbeite ich, dienstags lerne ich Deutsch.",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "Zahlen, Uhrzeit und Termine",
+      "unit_order": 2
+    },
+    {
+      "kind": "grammar",
+      "title": "Possessive articles: mein, dein, sein",
+      "detail": "Possessive articles take the same endings as ein: mein Vater, meine Mutter, meine Eltern.",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "Alltag: Familie, Arbeit und Wohnen",
+      "unit_order": 3
+    },
+    {
+      "kind": "grammar",
+      "title": "The accusative: den, die, das",
+      "detail": "Only the masculine article changes in the accusative: Ich habe einen Bruder. Ich sehe den Mann.",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "Alltag: Familie, Arbeit und Wohnen",
+      "unit_order": 3
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Saying where you live and work",
+      "detail": "Both in and bei take the dative; in is used for a place and bei for a company or a person: Ich wohne in Berlin. Ich arbeite bei Siemens.",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "Alltag: Familie, Arbeit und Wohnen",
+      "unit_order": 3
+    },
+    {
+      "kind": "vocab",
+      "title": "die Wohnung, das Zimmer",
+      "detail": "die Wohnung is a flat and das Zimmer a room; die Miete is the rent paid for a flat.",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "Alltag: Familie, Arbeit und Wohnen",
+      "unit_order": 3
+    },
+    {
+      "kind": "vocab",
+      "title": "der Beruf, die Stelle",
+      "detail": "der Beruf is a profession and die Stelle a position; Was machst du beruflich? asks about someone's job.",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "Alltag: Familie, Arbeit und Wohnen",
+      "unit_order": 3
+    },
+    {
+      "kind": "grammar",
+      "title": "No article after a quantity",
+      "detail": "Uncountable nouns often take no article after a quantity: Ich kaufe Milch und Brot. Ich brauche noch Reis.",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "Einkaufen und Essen",
+      "unit_order": 4
+    },
+    {
+      "kind": "grammar",
+      "title": "Negating with kein and nicht",
+      "detail": "kein negates a noun that would take ein, while nicht negates everything else: Ich habe kein Geld. Das ist nicht teuer.",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "Einkaufen und Essen",
+      "unit_order": 4
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Ordering politely with möchte",
+      "detail": "möchte is the polite way to ask for something in a shop or café: Ich möchte einen Kaffee, bitte.",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "Einkaufen und Essen",
+      "unit_order": 4
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Asking for a price",
+      "detail": "Was kostet das? asks the price, and the answer uses kosten: Das kostet drei Euro.",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "Einkaufen und Essen",
+      "unit_order": 4
+    },
+    {
+      "kind": "vocab",
+      "title": "das Gericht, die Rechnung",
+      "detail": "das Gericht is a dish and die Rechnung the bill; Die Rechnung, bitte is how a meal is paid for.",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "Einkaufen und Essen",
+      "unit_order": 4
+    },
+    {
+      "kind": "vocab",
+      "title": "das Gemüse, das Obst",
+      "detail": "das Gemüse is vegetables and das Obst fruit; both are usually used without a plural form.",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "Einkaufen und Essen",
+      "unit_order": 4
+    },
+    {
+      "kind": "grammar",
+      "title": "The dative after mit and zu",
+      "detail": "mit and zu take the dative, and zu usually contracts: mit dem Bus, zum Bahnhof, zur Haltestelle.",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "Wege und Verkehr",
+      "unit_order": 5
+    },
+    {
+      "kind": "grammar",
+      "title": "The polite imperative with Sie",
+      "detail": "The polite command puts Sie after the verb: Nehmen Sie die Linie 4. Steigen Sie hier um.",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "Wege und Verkehr",
+      "unit_order": 5
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Asking for directions",
+      "detail": "Wie komme ich zum …? is a polite request for directions, and the answer often uses geradeaus, links and rechts.",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "Wege und Verkehr",
+      "unit_order": 5
+    },
+    {
+      "kind": "vocab",
+      "title": "der Bahnhof, die Haltestelle",
+      "detail": "der Bahnhof is a train station and die Haltestelle a stop; die Fahrkarte is the ticket.",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "Wege und Verkehr",
+      "unit_order": 5
+    },
+    {
+      "kind": "vocab",
+      "title": "umsteigen, einsteigen, aussteigen",
+      "detail": "These verbs describe changing, boarding and leaving a vehicle, and their prefix separates in a main clause: Ich steige am Hauptbahnhof um.",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "Wege und Verkehr",
+      "unit_order": 5
+    }
+  ]
+}

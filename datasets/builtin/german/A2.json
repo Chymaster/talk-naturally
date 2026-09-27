@@ -1,0 +1,249 @@
+{
+  "title": "German A2",
+  "source_language": "English",
+  "target_language": "German",
+  "level": "A2",
+  "origin": "builtin",
+  "points": [
+    {
+      "kind": "grammar",
+      "title": "Perfekt with haben and sein",
+      "detail": "Most verbs build the perfect with haben, but verbs of movement and change of state use sein: Ich bin nach Berlin gefahren.",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "Reisen und Urlaub",
+      "unit_order": 1
+    },
+    {
+      "kind": "grammar",
+      "title": "Regular and irregular participles",
+      "detail": "Regular participles end in -t (gemacht), irregular ones in -en (gefahren) and often change their stem vowel.",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "Reisen und Urlaub",
+      "unit_order": 1
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Subordinate clause with wenn",
+      "detail": "A wenn-clause sends the conjugated verb to the end, and the main clause then starts with its verb: Wenn ich Zeit habe, fahre ich ans Meer.",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "Reisen und Urlaub",
+      "unit_order": 1
+    },
+    {
+      "kind": "vocab",
+      "title": "die Unterkunft, die Jugendherberge",
+      "detail": "die Unterkunft is accommodation and die Jugendherberge a youth hostel; buchen means to book a room or a trip.",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "Reisen und Urlaub",
+      "unit_order": 1
+    },
+    {
+      "kind": "vocab",
+      "title": "die Reise, die Fahrt",
+      "detail": "A longer journey is eine Reise, while the ride itself is eine Fahrt; Gute Reise! is a farewell.",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "Reisen und Urlaub",
+      "unit_order": 1
+    },
+    {
+      "kind": "grammar",
+      "title": "Modal verbs in the Präteritum",
+      "detail": "musste, konnte, wollte and durfte describe the past, and the main verb stays in the infinitive at the end: Ich musste lange warten.",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "Gesundheit und Körper",
+      "unit_order": 2
+    },
+    {
+      "kind": "grammar",
+      "title": "Imperative with du and ihr",
+      "detail": "The du form drops the -st ending and the ihr form drops the -t: Mach das Fenster zu. Macht das Fenster zu.",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "Gesundheit und Körper",
+      "unit_order": 2
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Talking about pain",
+      "detail": "Pain can be expressed with weh tun or a compound noun: Mein Kopf tut weh. Ich habe Kopfschmerzen.",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "Gesundheit und Körper",
+      "unit_order": 2
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Giving advice with An deiner Stelle",
+      "detail": "An deiner Stelle würde ich … introduces a piece of advice, and the main verb follows in the infinitive.",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "Gesundheit und Körper",
+      "unit_order": 2
+    },
+    {
+      "kind": "vocab",
+      "title": "die Schmerzen, die Erkältung",
+      "detail": "die Schmerzen are pains and die Erkältung a cold; sich erkälten means to catch a cold.",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "Gesundheit und Körper",
+      "unit_order": 2
+    },
+    {
+      "kind": "grammar",
+      "title": "Subordinate clauses with weil and dass",
+      "detail": "In a weil- or dass-clause the conjugated verb moves to the final position: Ich lerne Deutsch, weil ich in Berlin arbeite.",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "Arbeit und Beruf",
+      "unit_order": 3
+    },
+    {
+      "kind": "grammar",
+      "title": "Relative clauses in the nominative and accusative",
+      "detail": "The relative pronoun agrees with the noun it refers to: der Mann, der hier arbeitet; den Mann, den ich kenne.",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "Arbeit und Beruf",
+      "unit_order": 3
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Applying for a job",
+      "detail": "sich bewerben um takes the accusative: Ich bewerbe mich um eine Stelle als Ingenieur.",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "Arbeit und Beruf",
+      "unit_order": 3
+    },
+    {
+      "kind": "vocab",
+      "title": "das Gehalt, die Erfahrung",
+      "detail": "das Gehalt is the salary and die Erfahrung the experience; both often appear in a Bewerbung.",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "Arbeit und Beruf",
+      "unit_order": 3
+    },
+    {
+      "kind": "vocab",
+      "title": "die Ausbildung, das Praktikum",
+      "detail": "die Ausbildung is vocational training and das Praktikum an internship; both count as practical experience.",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "Arbeit und Beruf",
+      "unit_order": 3
+    },
+    {
+      "kind": "grammar",
+      "title": "The passive with werden",
+      "detail": "The passive is built with werden plus the past participle: Das Formular wird online ausgefüllt.",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "Medien und Kommunikation",
+      "unit_order": 4
+    },
+    {
+      "kind": "grammar",
+      "title": "Konjunktiv II: könnte, sollte",
+      "detail": "könnte and sollte make a request or a suggestion sound polite: Könnten Sie das bitte wiederholen?",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "Medien und Kommunikation",
+      "unit_order": 4
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Reporting an open question with ob",
+      "detail": "An ob-clause reports a yes/no question and sends the verb to the end: Ich weiß nicht, ob er heute kommt.",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "Medien und Kommunikation",
+      "unit_order": 4
+    },
+    {
+      "kind": "vocab",
+      "title": "die Nachricht, die Anzeige",
+      "detail": "die Nachricht is a message and die Anzeige an advertisement; eine Nachricht schicken means to send a message.",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "Medien und Kommunikation",
+      "unit_order": 4
+    },
+    {
+      "kind": "vocab",
+      "title": "die Werbung, das Gerücht",
+      "detail": "die Werbung is advertising and das Gerücht a rumour; both are common when talking about the media.",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "Medien und Kommunikation",
+      "unit_order": 4
+    },
+    {
+      "kind": "grammar",
+      "title": "Comparative and superlative",
+      "detail": "The comparative adds -er and the superlative uses am …-sten: schnell, schneller, am schnellsten.",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "Feste, Gefühle und Vergleiche",
+      "unit_order": 5
+    },
+    {
+      "kind": "grammar",
+      "title": "Adjective endings after der, die, das",
+      "detail": "After a definite article the adjective takes the weak ending -e or -en: das kleine Kind, mit dem kleinen Kind.",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "Feste, Gefühle und Vergleiche",
+      "unit_order": 5
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Looking forward with sich freuen auf",
+      "detail": "sich freuen auf looks forward to something, while sich freuen über is glad about something that already happened.",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "Feste, Gefühle und Vergleiche",
+      "unit_order": 5
+    },
+    {
+      "kind": "vocab",
+      "title": "die Feier, das Geschenk",
+      "detail": "die Feier is a celebration and das Geschenk a present; jemanden einladen means to invite someone.",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "Feste, Gefühle und Vergleiche",
+      "unit_order": 5
+    },
+    {
+      "kind": "vocab",
+      "title": "die Freude, die Angst",
+      "detail": "die Freude is joy and die Angst fear; Angst haben vor takes the dative.",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "Feste, Gefühle und Vergleiche",
+      "unit_order": 5
+    },
+    {
+      "kind": "grammar",
+      "title": "The future with werden",
+      "detail": "werden plus the infinitive speaks about the future: Wir werden weniger Plastik benutzen.",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "Umwelt und Zukunft",
+      "unit_order": 6
+    },
+    {
+      "kind": "grammar",
+      "title": "Concession with obwohl and trotzdem",
+      "detail": "obwohl opens a subordinate clause with the verb at the end, while trotzdem starts a main clause and is followed by the verb.",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "Umwelt und Zukunft",
+      "unit_order": 6
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "General advice with man sollte",
+      "detail": "man sollte gives general advice, and a following dass-clause puts its verb at the end: Man sollte Energie sparen.",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "Umwelt und Zukunft",
+      "unit_order": 6
+    },
+    {
+      "kind": "vocab",
+      "title": "der Müll, die Umwelt",
+      "detail": "der Müll is rubbish and die Umwelt the environment; Müll trennen means to separate waste.",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "Umwelt und Zukunft",
+      "unit_order": 6
+    },
+    {
+      "kind": "vocab",
+      "title": "die Energie, das Klima",
+      "detail": "die Energie is energy and das Klima the climate; erneuerbare Energien is the usual phrase for renewables.",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "Umwelt und Zukunft",
+      "unit_order": 6
+    }
+  ]
+}

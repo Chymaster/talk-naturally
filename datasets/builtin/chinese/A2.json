@@ -1,0 +1,249 @@
+{
+  "title": "Chinese A2",
+  "source_language": "English",
+  "target_language": "Chinese",
+  "level": "A2",
+  "origin": "builtin",
+  "points": [
+    {
+      "kind": "grammar",
+      "title": "Completed action with 了",
+      "detail": "了 (le) after a verb marks a completed action: 我去了中国 (wǒ qù le Zhōngguó) \"I went to China\"; the negative is 没(有) and drops 了: 我没去 (wǒ méi qù).",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "旅行和度假",
+      "unit_order": 1
+    },
+    {
+      "kind": "grammar",
+      "title": "Experience with 过",
+      "detail": "过 (guo) after a verb says the action has been experienced at least once: 我吃过北京烤鸭 (wǒ chī guo Běijīng kǎoyā) \"I have eaten Peking duck\"; 我没去过中国 (wǒ méi qù guo Zhōngguó).",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "旅行和度假",
+      "unit_order": 1
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Two actions at once with 一边……一边……",
+      "detail": "一边 (yìbiān) … 一边 … links two actions happening at the same time: 他一边走一边打电话 (tā yìbiān zǒu yìbiān dǎ diànhuà) \"he talks on the phone while walking\".",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "旅行和度假",
+      "unit_order": 1
+    },
+    {
+      "kind": "vocab",
+      "title": "旅行, 度假, 护照, 行李",
+      "detail": "旅行 (lǚxíng) is to travel and 度假 (dùjià) to go on holiday; 护照 (hùzhào) is a passport and 行李 (xíngli) luggage.",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "旅行和度假",
+      "unit_order": 1
+    },
+    {
+      "kind": "vocab",
+      "title": "预订, 机票, 酒店, 退房",
+      "detail": "预订 (yùdìng) means to book, 机票 (jīpiào) is a plane ticket and 酒店 (jiǔdiàn) a hotel; 入住 (rùzhù) is check-in and 退房 (tuìfáng) check-out.",
+      "raw_source": "seed: A2 unit 1",
+      "unit": "旅行和度假",
+      "unit_order": 1
+    },
+    {
+      "kind": "grammar",
+      "title": "The complement of manner with 得",
+      "detail": "得 (de) after a verb introduces a complement describing how the action is done: 他跑得很快 (tā pǎo de hěn kuài) \"he runs very fast\"; the negative is 跑得不快.",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "健康和身体",
+      "unit_order": 2
+    },
+    {
+      "kind": "grammar",
+      "title": "Result complements: 到, 住, 走, 上",
+      "detail": "A result complement is a verb placed after another verb to show the result: 看见 (kànjiàn) \"see\", 找到 (zhǎodào) \"find\", 记住 (jìzhù) \"remember\", 关上 (guānshàng) \"close\".",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "健康和身体",
+      "unit_order": 2
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "More and more with 越来越……",
+      "detail": "越来越 (yuè lái yuè) \"more and more\" stands before an adjective or a mental verb: 天气越来越热了 (tiānqì yuè lái yuè rè le) \"the weather is getting hotter and hotter\".",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "健康和身体",
+      "unit_order": 2
+    },
+    {
+      "kind": "vocab",
+      "title": "感冒, 发烧, 咳嗽, 药",
+      "detail": "感冒 (gǎnmào) is a cold, 发烧 (fāshāo) a fever, 咳嗽 (késou) a cough and 药 (yào) medicine: 我感冒了，要吃点儿药 (wǒ gǎnmào le, yào chī diǎnr yào).",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "健康和身体",
+      "unit_order": 2
+    },
+    {
+      "kind": "vocab",
+      "title": "医院, 挂号, 大夫, 检查",
+      "detail": "医院 (yīyuàn) is a hospital, 挂号 (guàhào) to register, 大夫 (dàifu) a doctor and 检查 (jiǎnchá) to examine: 我去医院检查身体 (wǒ qù yīyuàn jiǎnchá shēntǐ).",
+      "raw_source": "seed: A2 unit 2",
+      "unit": "健康和身体",
+      "unit_order": 2
+    },
+    {
+      "kind": "grammar",
+      "title": "The 把 construction",
+      "detail": "把 (bǎ) moves the object in front of the verb to focus on what happens to it, and the verb must carry another element: 我把作业做完了 (wǒ bǎ zuòyè zuò wán le) \"I finished the homework\".",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "工作和职业",
+      "unit_order": 3
+    },
+    {
+      "kind": "grammar",
+      "title": "The passive with 被",
+      "detail": "被 (bèi) marks the passive, and the agent after it may be left out: 我的手机被弟弟拿走了 (wǒ de shǒujī bèi dìdi ná zǒu le) \"my phone was taken by my little brother\".",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "工作和职业",
+      "unit_order": 3
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "If … then … with 如果……就……",
+      "detail": "如果 (rúguǒ) … 就 (jiù) … is \"if … then …\": 如果明天有时间，我就去 (rúguǒ míngtiān yǒu shíjiān, wǒ jiù qù) \"if I have time tomorrow, I will go\".",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "工作和职业",
+      "unit_order": 3
+    },
+    {
+      "kind": "vocab",
+      "title": "面试, 简历, 经验, 工资",
+      "detail": "面试 (miànshì) is an interview, 简历 (jiǎnlì) a résumé, 经验 (jīngyàn) experience and 工资 (gōngzī) a salary: 他有三年工作经验 (tā yǒu sān nián gōngzuò jīngyàn).",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "工作和职业",
+      "unit_order": 3
+    },
+    {
+      "kind": "vocab",
+      "title": "同事, 经理, 加班, 请假",
+      "detail": "同事 (tóngshì) is a colleague and 经理 (jīnglǐ) a manager; 加班 (jiābān) is to work overtime and 请假 (qǐngjià) to ask for leave.",
+      "raw_source": "seed: A2 unit 3",
+      "unit": "工作和职业",
+      "unit_order": 3
+    },
+    {
+      "kind": "grammar",
+      "title": "An action in progress with 正在……呢",
+      "detail": "正在 (zhèngzài) before a verb, often with 呢 (ne) at the end, marks an action in progress: 他正在打电话呢 (tā zhèngzài dǎ diànhuà ne) \"he is on the phone right now\".",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "媒体和通讯",
+      "unit_order": 4
+    },
+    {
+      "kind": "grammar",
+      "title": "Besides and except with 除了……以外",
+      "detail": "除了 (chúle) … 以外 (yǐwài) with 还 or 也 means \"besides\", and with 都 means \"except\": 除了汉语以外，我还学英语 (chúle Hànyǔ yǐwài, wǒ hái xué Yīngyǔ).",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "媒体和通讯",
+      "unit_order": 4
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "As soon as … with 一……就……",
+      "detail": "一 (yī) … 就 (jiù) … says one thing happens as soon as another does: 我一回家就睡觉 (wǒ yì huí jiā jiù shuìjiào) \"I go to sleep as soon as I get home\".",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "媒体和通讯",
+      "unit_order": 4
+    },
+    {
+      "kind": "vocab",
+      "title": "手机, 短信, 微信, 邮件",
+      "detail": "手机 (shǒujī) is a mobile phone, 短信 (duǎnxìn) a text message, 微信 (Wēixìn) WeChat and 邮件 (yóujiàn) email: 我给你发微信 (wǒ gěi nǐ fā Wēixìn).",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "媒体和通讯",
+      "unit_order": 4
+    },
+    {
+      "kind": "vocab",
+      "title": "新闻, 节目, 广告, 网络",
+      "detail": "新闻 (xīnwén) is the news, 节目 (jiémù) a programme, 广告 (guǎnggào) an advertisement and 网络 (wǎngluò) the internet.",
+      "raw_source": "seed: A2 unit 4",
+      "unit": "媒体和通讯",
+      "unit_order": 4
+    },
+    {
+      "kind": "grammar",
+      "title": "Comparing with 比",
+      "detail": "比 (bǐ) compares two things as A比B+adjective, with 更 or 还 to intensify and 得多 after the adjective for a big difference: 今天比昨天热得多 (jīntiān bǐ zuótiān rè de duō).",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "节日、感情和比较",
+      "unit_order": 5
+    },
+    {
+      "kind": "grammar",
+      "title": "The same as with 跟……一样",
+      "detail": "跟 (gēn) … 一样 (yíyàng) says two things are the same, and 不一样 that they differ: 我的意见跟你的一样 (wǒ de yìjiàn gēn nǐ de yíyàng).",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "节日、感情和比较",
+      "unit_order": 5
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Although … but … with 虽然……但是……",
+      "detail": "虽然 (suīrán) … 但是 (dànshì) … is \"although … but …\", and the two halves stay in that order: 虽然下雨了，但是我们还是去了 (suīrán xià yǔ le, dànshì wǒmen háishì qù le).",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "节日、感情和比较",
+      "unit_order": 5
+    },
+    {
+      "kind": "vocab",
+      "title": "春节, 中秋节, 礼物, 红包",
+      "detail": "春节 (Chūnjié) is the Spring Festival and 中秋节 (Zhōngqiūjié) the Mid-Autumn Festival; 礼物 (lǐwù) is a gift and 红包 (hóngbāo) a red envelope.",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "节日、感情和比较",
+      "unit_order": 5
+    },
+    {
+      "kind": "vocab",
+      "title": "高兴, 担心, 生气, 满意",
+      "detail": "高兴 (gāoxìng) is glad, 担心 (dānxīn) worried, 生气 (shēngqì) angry and 满意 (mǎnyì) satisfied: 我对他很满意 (wǒ duì tā hěn mǎnyì).",
+      "raw_source": "seed: A2 unit 5",
+      "unit": "节日、感情和比较",
+      "unit_order": 5
+    },
+    {
+      "kind": "grammar",
+      "title": "Ability and permission with 会, 能, 可以",
+      "detail": "会 (huì) is a learned skill, 能 (néng) an ability or circumstance and 可以 (kěyǐ) permission: 我会说汉语 (wǒ huì shuō Hànyǔ); 这里可以停车吗？(zhèlǐ kěyǐ tíng chē ma?)",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "环境和未来",
+      "unit_order": 6
+    },
+    {
+      "kind": "grammar",
+      "title": "Because … so … with 因为……所以……",
+      "detail": "因为 (yīnwèi) … 所以 (suǒyǐ) … is \"because … so …\": 因为天气不好，所以我们在家 (yīnwèi tiānqì bù hǎo, suǒyǐ wǒmen zài jiā).",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "环境和未来",
+      "unit_order": 6
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Softening a suggestion with 吧",
+      "detail": "The particle 吧 (ba) softens a suggestion or a command: 我们走吧 (wǒmen zǒu ba) \"let's go\"; 你休息一下吧 (nǐ xiūxi yíxià ba) \"why don't you take a rest\".",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "环境和未来",
+      "unit_order": 6
+    },
+    {
+      "kind": "vocab",
+      "title": "环境, 污染, 垃圾, 环保",
+      "detail": "环境 (huánjìng) is the environment, 污染 (wūrǎn) pollution, 垃圾 (lājī) rubbish and 环保 (huánbǎo) environmental protection: 我们应该保护环境 (wǒmen yīnggāi bǎohù huánjìng).",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "环境和未来",
+      "unit_order": 6
+    },
+    {
+      "kind": "vocab",
+      "title": "将来, 计划, 希望, 努力",
+      "detail": "将来 (jiānglái) is the future, 计划 (jìhuà) a plan, 希望 (xīwàng) to hope and 努力 (nǔlì) to work hard: 我希望将来去中国工作 (wǒ xīwàng jiānglái qù Zhōngguó gōngzuò).",
+      "raw_source": "seed: A2 unit 6",
+      "unit": "环境和未来",
+      "unit_order": 6
+    }
+  ]
+}

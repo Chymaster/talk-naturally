@@ -1,0 +1,60 @@
+%% The per-message turn workflow — design/50-orchestration.md §3.2
+%% Source of truth for the picture. Node names are the real function names in
+%% engine/turn-graph.ts; each edge is a rule compiled into the StateGraph.
+%% `route` is a deterministic decision made before any model call; `onboarding`
+%% makes no model call and, once it completes, `open` starts the first session.
+%% `classify` decides the branch without writing prose; `answer` writes an
+%% answer, a correction, or a drift response in one language; `continue_turn`
+%% writes the next target-language turn, and only runs when the learner answered.
+%% `answered` is the one graph node that asks whether they did; `reask` repeats
+%% the question on the table word for word, and `compose` joins the parts.
+%% Update this file in the same change as the graph, or delete it (§6).
+%%
+%% Render with any Mermaid renderer, e.g. GitHub's, or:
+%%   npx @mermaid-js/mermaid-cli -i turn-graph.mmd -o turn-graph.svg
+%% (that renderer needs a headless browser; none is installed in CI yet).
+flowchart TD
+  START([START]) --> route[route<br/>read learner settings]
+
+  route -->|settings incomplete| onboarding[onboarding<br/>ask language / level / chapter,<br/>no model call]
+  route -->|settings complete| assemble[assemble<br/>resolve scope, load class + progress,<br/>select targets, build prompts]
+
+  onboarding --> onboarded{onboarding just completed?}
+  onboarded -->|no| deliver[deliver]
+  onboarded -->|yes| open[open<br/>start the first session,<br/>ask the first question]
+
+  assemble --> no_class{class resolved?}
+  no_class -->|no| deliver
+  no_class -->|yes| classify[classify<br/>one structured model call,<br/>no learner-facing text]
+
+  classify --> validate[validate<br/>zod parse of untrusted output]
+
+  validate -->|"model error / schema invalid"| failed[failed<br/>keep learner message,<br/>leave progress untouched]
+  validate -->|attempt_judged| attempt_judged[attempt_judged]
+  validate -->|question| question[question]
+  validate -->|kp_question| kp_question[kp_question]
+  validate -->|drift| drift[drift]
+
+  attempt_judged --> corrections{corrections present?}
+  corrections -->|yes| attempt_corrected[attempt_corrected]
+  corrections -->|no| attempt_accepted[attempt_accepted]
+
+  question --> answer[answer<br/>one language only: the source language,<br/>a correction, or the target language for drift]
+  kp_question --> answer
+  drift --> answer
+  attempt_corrected --> answer
+
+  attempt_accepted --> answered{answered the question<br/>on the table?}
+  answer --> answered
+
+  answered -->|yes| continue_turn[continue_turn<br/>one language only: the target language,<br/>the next question]
+  answered -->|no| reask[reask<br/>repeat the question on the table,<br/>word for word]
+
+  continue_turn --> compose[compose<br/>join the single-language parts,<br/>question last]
+  reask --> compose
+  compose --> persist[persist<br/>at most one update per knowledge point,<br/>idempotent per turn + kp]
+
+  open --> deliver
+  persist --> deliver
+  failed --> deliver
+  deliver --> END([END])

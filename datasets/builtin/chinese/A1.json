@@ -1,0 +1,249 @@
+{
+  "title": "Chinese A1",
+  "source_language": "English",
+  "target_language": "Chinese",
+  "level": "A1",
+  "origin": "builtin",
+  "points": [
+    {
+      "kind": "grammar",
+      "title": "The 是 sentence",
+      "detail": "是 (shì) links two nouns and is negated with 不: 我是学生 (wǒ shì xuésheng) \"I am a student\"; 他不是老师 (tā bú shì lǎoshī) \"he is not a teacher\". It is not used with adjectives.",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "问候和介绍",
+      "unit_order": 1
+    },
+    {
+      "kind": "grammar",
+      "title": "Yes/no questions with 吗",
+      "detail": "Adding 吗 (ma) to the end of a statement makes a yes/no question, and the word order does not change: 你是学生吗？(nǐ shì xuésheng ma?) \"Are you a student?\"",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "问候和介绍",
+      "unit_order": 1
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Asking a name with 请问 and 姓",
+      "detail": "请问 (qǐngwèn) politely opens a question, and 姓 (xìng) asks for or gives a surname: 请问，你姓什么？(qǐngwèn, nǐ xìng shénme?) \"May I ask what your surname is?\"",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "问候和介绍",
+      "unit_order": 1
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "也 and 都 before the verb",
+      "detail": "也 (yě) \"also\" and 都 (dōu) \"all\" stand before the verb, never at the end: 我也是学生 (wǒ yě shì xuésheng); 我们都是学生 (wǒmen dōu shì xuésheng).",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "问候和介绍",
+      "unit_order": 1
+    },
+    {
+      "kind": "vocab",
+      "title": "你好, 再见, 谢谢",
+      "detail": "你好 (nǐ hǎo) is the everyday greeting and 您好 (nín hǎo) its polite form; 再见 (zàijiàn) is goodbye and 谢谢 (xièxie) is thanks.",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "问候和介绍",
+      "unit_order": 1
+    },
+    {
+      "kind": "vocab",
+      "title": "名字, 姓, 贵姓",
+      "detail": "名字 (míngzi) is a full name, 姓 (xìng) a surname, and 贵姓 (guìxìng) the polite way to ask for one: 您贵姓？(nín guìxìng?)",
+      "raw_source": "seed: A1 unit 1",
+      "unit": "问候和介绍",
+      "unit_order": 1
+    },
+    {
+      "kind": "grammar",
+      "title": "Asking numbers with 几 and 多少",
+      "detail": "几 (jǐ) asks for a small number and needs a measure word, while 多少 (duōshao) asks for any amount and often takes none: 你有几本书？(nǐ yǒu jǐ běn shū?); 这个多少钱？(zhège duōshao qián?)",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "数字、时间和日期",
+      "unit_order": 2
+    },
+    {
+      "kind": "grammar",
+      "title": "Measure words: 个, 本, 口",
+      "detail": "A number and a noun need a measure word between them; 个 (gè) is the general one, 本 (běn) counts books and 口 (kǒu) counts family members: 三个人 (sān gè rén); 两本书 (liǎng běn shū).",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "数字、时间和日期",
+      "unit_order": 2
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Dates and days of the week",
+      "detail": "Dates run from the largest unit to the smallest: 2026年9月27日 (èr líng èr liù nián jiǔ yuè èrshíqī rì); weekdays are 星期 (xīngqī) plus a number, 星期一 to 星期六, with 星期日 or 星期天 for Sunday.",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "数字、时间和日期",
+      "unit_order": 2
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Telling the time",
+      "detail": "现在几点？(xiànzài jǐ diǎn?) asks the time, and the answer uses 点 (diǎn) for the hour and 分 (fēn) for the minute: 现在八点半 (xiànzài bā diǎn bàn) \"it is half past eight\".",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "数字、时间和日期",
+      "unit_order": 2
+    },
+    {
+      "kind": "vocab",
+      "title": "今天, 明天, 昨天",
+      "detail": "今天 (jīntiān) is today, 明天 (míngtiān) tomorrow and 昨天 (zuótiān) yesterday; 上午, 下午 and 晚上 divide the day into morning, afternoon and evening.",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "数字、时间和日期",
+      "unit_order": 2
+    },
+    {
+      "kind": "vocab",
+      "title": "点, 分, 半, 刻",
+      "detail": "点 (diǎn) is the hour and 分 (fēn) the minute; 半 (bàn) means half past and 一刻 (yí kè) a quarter: 三点一刻 (sān diǎn yí kè) \"a quarter past three\".",
+      "raw_source": "seed: A1 unit 2",
+      "unit": "数字、时间和日期",
+      "unit_order": 2
+    },
+    {
+      "kind": "grammar",
+      "title": "Possession and description with 的",
+      "detail": "的 (de) links a possessor or a description to a noun: 我的爸爸 (wǒ de bàba) \"my father\"; 中国的茶 (Zhōngguó de chá) \"Chinese tea\". With close family the 的 is often dropped.",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "家人、工作和住处",
+      "unit_order": 3
+    },
+    {
+      "kind": "grammar",
+      "title": "有 for having and there being",
+      "detail": "有 (yǒu) says what someone has or what exists, and is negated with 没有, never 不有: 我有一个哥哥 (wǒ yǒu yí gè gēge); 我没有时间 (wǒ méiyǒu shíjiān).",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "家人、工作和住处",
+      "unit_order": 3
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Saying where you live and work",
+      "detail": "在 (zài) before a place says where someone is or does something: 我在家 (wǒ zài jiā) \"I am at home\"; 我住在北京 (wǒ zhù zài Běijīng) \"I live in Beijing\".",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "家人、工作和住处",
+      "unit_order": 3
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Asking about a family with 几口人",
+      "detail": "家里有几口人？(jiā li yǒu jǐ kǒu rén?) asks how many people are in a family, where 口 (kǒu) is the measure word for family members; the answer is 我家有三口人 (wǒ jiā yǒu sān kǒu rén).",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "家人、工作和住处",
+      "unit_order": 3
+    },
+    {
+      "kind": "vocab",
+      "title": "爸爸, 妈妈, 哥哥, 姐姐",
+      "detail": "爸爸 (bàba) is father, 妈妈 (māma) mother, 哥哥 (gēge) elder brother and 姐姐 (jiějie) elder sister; 弟弟 (dìdi) and 妹妹 (mèimei) are younger siblings.",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "家人、工作和住处",
+      "unit_order": 3
+    },
+    {
+      "kind": "vocab",
+      "title": "工作, 公司, 医生, 学生",
+      "detail": "工作 (gōngzuò) is work or to work and 公司 (gōngsī) a company; 医生 (yīshēng) is a doctor and 学生 (xuésheng) a student: 我妈妈是医生 (wǒ māma shì yīshēng).",
+      "raw_source": "seed: A1 unit 3",
+      "unit": "家人、工作和住处",
+      "unit_order": 3
+    },
+    {
+      "kind": "grammar",
+      "title": "这 and 那 with a measure word",
+      "detail": "这 (zhè) \"this\" and 那 (nà) \"that\" need a measure word before a noun: 这个 (zhège) \"this one\"; 那本书 (nà běn shū) \"that book\"; 这些 and 那些 are the plurals.",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "买东西和吃饭",
+      "unit_order": 4
+    },
+    {
+      "kind": "grammar",
+      "title": "太……了 for excess",
+      "detail": "太 (tài) before an adjective with 了 (le) after it expresses excess: 太贵了 (tài guì le) \"too expensive\"; 太好了 (tài hǎo le) means \"great\".",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "买东西和吃饭",
+      "unit_order": 4
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Asking a price with 多少钱",
+      "detail": "多少钱？(duōshao qián?) asks the price, and the spoken word for the yuan is 块 (kuài): 五块 (wǔ kuài) \"five yuan\"; 这个多少钱？(zhège duōshao qián?)",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "买东西和吃饭",
+      "unit_order": 4
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Ordering with 要 and 想",
+      "detail": "要 (yào) states what you want and 想 (xiǎng) is softer, \"would like to\"; both take the thing or the verb directly: 我要一杯茶 (wǒ yào yì bēi chá) \"I would like a cup of tea\".",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "买东西和吃饭",
+      "unit_order": 4
+    },
+    {
+      "kind": "vocab",
+      "title": "米饭, 面条, 饺子, 茶",
+      "detail": "米饭 (mǐfàn) is cooked rice, 面条 (miàntiáo) noodles, 饺子 (jiǎozi) dumplings and 茶 (chá) tea; 杯 (bēi) is the measure word for a cup of liquid.",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "买东西和吃饭",
+      "unit_order": 4
+    },
+    {
+      "kind": "vocab",
+      "title": "商店, 超市, 贵, 便宜",
+      "detail": "商店 (shāngdiàn) is a shop and 超市 (chāoshì) a supermarket; 贵 (guì) is expensive and 便宜 (piányi) cheap: 这个很便宜 (zhège hěn piányi) \"this is very cheap\".",
+      "raw_source": "seed: A1 unit 4",
+      "unit": "买东西和吃饭",
+      "unit_order": 4
+    },
+    {
+      "kind": "grammar",
+      "title": "Asking how to get somewhere with 怎么",
+      "detail": "怎么 (zěnme) asks how, and the answer uses 坐 (zuò) with a vehicle: 去火车站怎么走？(qù huǒchēzhàn zěnme zǒu?) \"How do I get to the train station?\"; 坐地铁 (zuò dìtiě) \"take the metro\".",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "问路和交通",
+      "unit_order": 5
+    },
+    {
+      "kind": "grammar",
+      "title": "从……到…… for from and to",
+      "detail": "从 (cóng) … 到 (dào) … marks one place or time through to another: 从家到学校 (cóng jiā dào xuéxiào) \"from home to school\"; 从八点到十点 (cóng bā diǎn dào shí diǎn) \"from eight to ten\".",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "问路和交通",
+      "unit_order": 5
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Giving directions with 往 and 向",
+      "detail": "往 (wǎng) or 向 (xiàng) plus a direction tells where to go: 往前走 (wǎng qián zǒu) \"go straight ahead\"; 向左 (xiàng zuǒ) \"to the left\"; 向右 (xiàng yòu) \"to the right\".",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "问路和交通",
+      "unit_order": 5
+    },
+    {
+      "kind": "sentence_structure",
+      "title": "Asking where with 在哪儿",
+      "detail": "在哪儿？(zài nǎr?) asks where something is, and 这儿 or 那儿 answer: 洗手间在哪儿？(xǐshǒujiān zài nǎr?) \"Where is the toilet?\"; 在那儿 (zài nàr) \"over there\".",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "问路和交通",
+      "unit_order": 5
+    },
+    {
+      "kind": "vocab",
+      "title": "火车站, 机场, 地铁, 公交车",
+      "detail": "火车站 (huǒchēzhàn) is a train station, 机场 (jīchǎng) an airport, 地铁 (dìtiě) the metro and 公交车 (gōngjiāochē) a bus; 票 (piào) is a ticket.",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "问路和交通",
+      "unit_order": 5
+    },
+    {
+      "kind": "vocab",
+      "title": "左, 右, 前, 后, 旁边",
+      "detail": "左 (zuǒ) is left, 右 (yòu) right, 前 (qián) front, 后 (hòu) back and 旁边 (pángbiān) beside: 银行在书店旁边 (yínháng zài shūdiàn pángbiān) \"the bank is beside the bookshop\".",
+      "raw_source": "seed: A1 unit 5",
+      "unit": "问路和交通",
+      "unit_order": 5
+    }
+  ]
+}
