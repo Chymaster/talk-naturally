@@ -1,6 +1,6 @@
 /**
  * The boundary check is part of the suite, and a failure is a real failure
- * (AGENT.md §4, §11, §16).
+ * (design/20-architecture.md §3, design/70-stack.md §5, AGENT.md design/20-architecture.md §5).
  *
  * It shares its implementation with `pnpm boundary`, so the two can never drift
  * apart. It must never pass vacuously, which is why the scan asserts a
@@ -12,15 +12,15 @@ import { ALLOWED_BARE_IMPORTS, scanCoreBoundary } from "../tools/boundary-scan.j
 const report = scanCoreBoundary();
 
 describe("core boundary", () => {
-  it("actually scans the core", () => {
-    expect(report.scanned).toBeGreaterThanOrEqual(10);
-  });
+ it("actually scans the core", () => {
+ expect(report.scanned).toBeGreaterThanOrEqual(10);
+ });
 
-  it("is intact: no outer-layer import, platform module, or provider name", () => {
-    expect(report.violations).toEqual([]);
-  });
+ it("is intact: no outer-layer import, platform module, or provider name", () => {
+ expect(report.violations).toEqual([]);
+ });
 
-  it("allows only pure libraries as bare imports", () => {
-    expect([...ALLOWED_BARE_IMPORTS]).toEqual(["zod"]);
-  });
+ it("allows only pure libraries as bare imports", () => {
+ expect([...ALLOWED_BARE_IMPORTS]).toEqual(["zod"]);
+ });
 });
